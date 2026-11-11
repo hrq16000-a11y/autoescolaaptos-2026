@@ -144,7 +144,7 @@ export const SERVICOS: Record<string, ServicoData> = {
     beneficios: [
       {
         title: "Curso em modalidade autorizada pelo Detran-PR",
-        desc: "Consulte a disponibilidade de aulas presenciais ou EaD síncronas conforme a regulamentação atual.",
+        desc: "O Detran-PR oferece modalidade presencial e permite cursos EaD. Consulte a modalidade disponível e as exigências da prova.",
       },
       {
         title: "Acompanhamento da formação",
@@ -174,7 +174,7 @@ export const SERVICOS: Record<string, ServicoData> = {
       },
       {
         title: "Realize a prova final",
-        desc: "A avaliação teórica e o registro da conclusão seguem as regras vigentes do Detran-PR.",
+        desc: "Na modalidade EaD, agende e realize a prova eletrônica exigida pelo Detran-PR após concluir o curso.",
       },
       {
         title: "Certificado enviado ao DETRAN-PR",
@@ -205,7 +205,7 @@ export const SERVICOS: Record<string, ServicoData> = {
       },
       {
         q: "O curso pode ser 100% online?",
-        a: "A Resolução Contran 1.020/2025 permite modalidades presenciais e EaD síncronas, conforme autorização. A equipe confirma a oferta disponível no momento da contratação.",
+        a: "O Detran-PR permite curso presencial ou EaD. Depois do curso EaD, é necessário realizar prova eletrônica própria do órgão. Confirme se a APTOS oferece a modalidade desejada e quais taxas são aplicáveis.",
       },
       {
         q: "Quanto tempo demora para concluir?",
@@ -221,7 +221,7 @@ export const SERVICOS: Record<string, ServicoData> = {
       },
       {
         q: "Se eu reprovar na prova final, posso refazer?",
-        a: "As condições de avaliação e eventual nova tentativa dependem das normas do Detran-PR e da modalidade autorizada. Consulte antes da matrícula.",
+        a: "Para o curso EaD, o Detran-PR exige prova eletrônica com 30 questões e 21 acertos. A reprovação exige nova taxa e repetição após 5 dias; novas reprovações podem exigir refazer o curso.",
       },
     ],
   },
