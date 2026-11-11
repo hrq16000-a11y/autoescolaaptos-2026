@@ -11,7 +11,7 @@ const Services = () => {
   
   const serviceDetails: Record<string, string> = {
     "Inclusão de Categoria (A ou B)": "/inclusao-categoria",
-    "Curso de Reciclagem 100% Online": "/reciclagem-cnh",
+    "Curso de Reciclagem": "/reciclagem-cnh",
     "Reteste Prático": "/reteste-pratico",
   };
 
@@ -24,7 +24,7 @@ const Services = () => {
         "Material didático incluso",
         "Curso teórico online (app CNH do Brasil)",
         "Aulas práticas com instrutores credenciados",
-        "Simulado online preparatório",
+        "Orientação sobre a prova teórica",
       ],
       highlight: "Promoção Especial",
     },
@@ -52,11 +52,11 @@ const Services = () => {
     },
     {
       icon: Bike,
-      title: "Curso de Reciclagem 100% Online",
+      title: "Curso de Reciclagem",
       description: "Para condutores suspensos que precisam voltar a dirigir",
       features: [
-        "EAD aprovado pelo DETRAN-PR",
-        "30 horas no seu ritmo",
+        "Modalidade conforme autorização do Detran-PR",
+        "45 horas-aula no Paraná",
         "Certificado enviado ao DETRAN",
         "Suporte por WhatsApp",
       ],

@@ -41,7 +41,7 @@ const etapas = [
     numero: 5,
     icon: Car,
     titulo: "AULAS PRÁTICAS",
-    descricao: "O aluno deve fazer obrigatoriamente 2 (duas) aulas práticas"
+    descricao: "A formação exige no mínimo 2 horas de aulas práticas, conforme a categoria"
   },
   {
     numero: 6,

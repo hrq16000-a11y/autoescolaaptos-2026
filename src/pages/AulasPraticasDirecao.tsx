@@ -93,7 +93,7 @@ const AulasPraticasDirecao = () => {
     {
       numero: 2,
       titulo: "Manobras Básicas",
-      descricao: "Baliza, conversões, ladeiras e manobras essenciais para o dia a dia"
+      descricao: "Conversões, sinalização, controle do veículo e manobras de direção segura"
     },
     {
       numero: 3,

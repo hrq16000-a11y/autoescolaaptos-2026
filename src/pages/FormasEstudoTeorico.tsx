@@ -43,7 +43,7 @@ const FormasEstudoTeorico = () => {
         "Interação direta com instrutores para esclarecer dúvidas",
         "Ambiente focado no aprendizado sem distrações",
         "Material didático atualizado e aprovado pelo DETRAN",
-        "Simulados presenciais com acompanhamento",
+        "Exercícios de revisão com acompanhamento",
         "Maior retenção de conhecimento comprovada"
       ],
       consideracoes: [
@@ -55,8 +55,8 @@ const FormasEstudoTeorico = () => {
     {
       icon: Smartphone,
       title: "Plataformas Digitais Oficiais",
-      subtitle: "Quando autorizadas pelo DETRAN",
-      description: "A Resolução 1020/2025 permite o uso de plataformas digitais oficiais para o estudo teórico, quando autorizadas pelo DETRAN do Estado. Um exemplo é o app CNH do Brasil.",
+      subtitle: "Disponíveis na CNH do Brasil",
+      description: "O conteúdo teórico pode ser estudado gratuitamente pelo aplicativo oficial CNH do Brasil, conforme o modelo vigente de formação.",
       vantagens: [
         "Flexibilidade de horário para estudar",
         "Possibilidade de estudar de casa",

@@ -36,13 +36,13 @@ const STEPS = [
     n: 6,
     icon: ShieldCheck,
     title: "Prova prática",
-    desc: "No DETRAN-PR. Nossos instrutores te preparam com simulado do circuito real.",
+    desc: "No Detran-PR. Preparação em direção segura, observação da sinalização e domínio do veículo.",
   },
   {
     n: 7,
     icon: CreditCard,
     title: "Sua CNH",
-    desc: "Emissão da PPD em ~10 dias úteis. Você está liberado para dirigir!",
+    desc: "PPD digital disponibilizada após aprovação e registro oficial. Confira no app CNH do Brasil.",
   },
 ];
 

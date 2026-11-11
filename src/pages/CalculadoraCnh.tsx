@@ -110,7 +110,7 @@ const CalculadoraCnh = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Simulador de Jornada CNH — Autoescola APTOS em São José dos Pinhais"
+        title="Planejador de Jornada CNH — Autoescola APTOS em São José dos Pinhais"
         description="Descubra em 3 passos o caminho da sua CNH: exames, curso, aulas práticas e prova. Sem cadastro. Receba um orçamento personalizado no WhatsApp."
         canonical="/calculadora-cnh"
       />
@@ -121,7 +121,7 @@ const CalculadoraCnh = () => {
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary mb-4">
               <Calculator className="w-8 h-8" aria-hidden />
             </div>
-            <h1 className="text-3xl md:text-5xl font-bold mb-2">Simulador de Jornada CNH</h1>
+            <h1 className="text-3xl md:text-5xl font-bold mb-2">Planejador de Jornada CNH</h1>
             <p className="text-base md:text-lg text-muted-foreground">
               3 perguntas rápidas e mostramos sua linha do tempo até a habilitação.
             </p>

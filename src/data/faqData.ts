@@ -51,7 +51,7 @@ export const faqData: FAQItem[] = [
   {
     category: "Categoria A",
     question: "O que dá direito a Categoria A?",
-    answer: "Permite dirigir motos, motonetas, scooters e ciclomotores acima de 50 cilindradas. Idade mínima: 18 anos."
+    answer: "Habilita para motocicletas, motonetas e ciclomotores permitidos pela categoria A. A primeira habilitação exige 18 anos completos."
   },
   {
     category: "Categoria A",

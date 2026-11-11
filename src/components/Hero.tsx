@@ -253,9 +253,9 @@ const Hero = () => {
           >
             {[
               "🚗 Carro manual e automático",
-              "🎮 Simulador / direção elétrica",
+              "🚘 Aulas com orientação prática",
               "📍 Próximo ao DETRAN",
-              "💻 Curso 100% online",
+              "📚 Teórico digital gratuito",
               "⚡ Atendimento rápido",
               "✅ Processo simplificado",
               "⭐ 4,9 no Google",
