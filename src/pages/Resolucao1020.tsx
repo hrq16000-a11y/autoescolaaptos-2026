@@ -33,9 +33,9 @@ export const jsonLd = {
         "@type": "FAQPage",
         "mainEntity": [
           { "@type": "Question", "name": "O que mudou com a Resolução 1020 2025 da CNH?", "acceptedAnswer": { "@type": "Answer", "text": "Acabou a carga horária mínima do teórico (estudo pelo app CNH do Brasil), a prática caiu para 2 horas obrigatórias e o prazo de 12 meses para concluir o processo foi extinto." } },
-          { "@type": "Question", "name": "A Resolução 1020/2025 já vale no Paraná?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. O DETRAN-PR já implementou as principais mudanças (sem prazo de 12 meses, 2h de prática, teórico online). Pontos como reteste gratuito e gratuidade da CNH digital ainda dependem de ajustes técnicos." } },
+          { "@type": "Question", "name": "A Resolução 1020/2025 já vale no Paraná?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. O DETRAN-PR já implementou as principais mudanças (sem prazo de 12 meses, 2h de prática, teórico online). A CNH digital é disponibilizada no Paraná e o primeiro reteste deve seguir as regras e a cobrança atual do Detran-PR." } },
           { "@type": "Question", "name": "Preciso fazer aulas teóricas presenciais?", "acceptedAnswer": { "@type": "Answer", "text": "Não. O curso teórico pode ser feito 100% online pelo aplicativo CNH do Brasil, no seu ritmo, sem carga horária mínima." } },
-          { "@type": "Question", "name": "Quanto custam os exames médico e psicológico no PR?", "acceptedAnswer": { "@type": "Answer", "text": "Atualmente R$ 404 no Paraná. O teto nacional de R$ 180 previsto na resolução está em análise jurídica pela PGE-PR." } }
+          { "@type": "Question", "name": "Quanto custam os exames médico e psicológico no PR?", "acceptedAnswer": { "@type": "Answer", "text": "A Lei estadual 23.259/2026 reduziu para R$ 180 o valor conjunto dos exames médico e psicológico no Paraná." } }
         ]
       }
     ]
@@ -64,7 +64,7 @@ const Resolucao1020 = () => {
   const continuaObrigatorio = [
     {
       title: "Exames Médico e Psicológico",
-      description: "Obrigatórios para todos os candidatos. No PR, o valor atual é R$ 404 (teto nacional de R$ 180 em análise jurídica pela PGE-PR)."
+      description: "Exigidos conforme o processo. No Paraná, o preço conjunto dos exames médico e psicológico foi reduzido para R$ 180 pela Lei 23.259/2026."
     },
     {
       title: "Prova Teórica (60 min, 20/30 acertos)",
@@ -76,7 +76,7 @@ const Resolucao1020 = () => {
     },
     {
       title: "Prova Prática de Direção",
-      description: "O exame prático segue o procedimento anterior (incluindo baliza) até a publicação do novo Manual Brasileiro de Exames pela Senatran."
+      description: "O Detran-PR retirou a exigência de baliza para a categoria B e de rampa para a categoria A. O exame continua avaliando direção segura."
     },
     {
       title: "Biometria e Abertura no DETRAN-PR",
@@ -305,7 +305,7 @@ const Resolucao1020 = () => {
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <span className="text-muted-foreground">Primeiro reteste gratuito</span>
+                    <span className="text-muted-foreground">Regras de reteste conforme a regulamentação e aplicação no Paraná</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
@@ -322,27 +322,27 @@ const Resolucao1020 = () => {
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 rounded-full bg-secondary mt-2 flex-shrink-0" />
-                    <span className="text-muted-foreground">Exames médico/psicológico: R$ 404 (teto nacional em análise pela PGE-PR)</span>
+                    <span className="text-muted-foreground">Exames médico e psicológico: valor conjunto de R$ 180 pela Lei estadual 23.259/2026</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 rounded-full bg-secondary mt-2 flex-shrink-0" />
-                    <span className="text-muted-foreground">Reteste gratuito: ainda não implementado (aguarda parecer jurídico)</span>
+                    <span className="text-muted-foreground">Reteste: confirmar agendamento, taxas e eventual gratuidade com o Detran-PR</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 rounded-full bg-secondary mt-2 flex-shrink-0" />
-                    <span className="text-muted-foreground">Questões do exame teórico em sincronização com o Banco Nacional</span>
+                    <span className="text-muted-foreground">Prova teórica: 30 questões, mínimo de 20 acertos, em 60 minutos</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 rounded-full bg-secondary mt-2 flex-shrink-0" />
-                    <span className="text-muted-foreground">Teste prático segue procedimento anterior (baliza inclusa)</span>
+                    <span className="text-muted-foreground">Exame prático no PR sem exigência de baliza (B) ou rampa (A)</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 rounded-full bg-secondary mt-2 flex-shrink-0" />
-                    <span className="text-muted-foreground">CNH Digital gratuita em implementação (documento impresso ainda obrigatório)</span>
+                    <span className="text-muted-foreground">CNH digital já disponibilizada no Paraná após a conclusão do processo</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 rounded-full bg-secondary mt-2 flex-shrink-0" />
-                    <span className="text-muted-foreground">PPD emitida em ~10 dias úteis após aprovação</span>
+                    <span className="text-muted-foreground">Permissão para Dirigir digital disponibilizada pelos canais oficiais após a aprovação</span>
                   </li>
                 </ul>
               </Card>

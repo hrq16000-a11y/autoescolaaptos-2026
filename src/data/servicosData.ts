@@ -46,8 +46,8 @@ export const SERVICOS: Record<string, ServicoData> = {
         desc: "Você não refaz exames já realizados anteriormente — só faz o que falta.",
       },
       {
-        title: "Curso teórico complementar online",
-        desc: "Estude pelo app CNH do Brasil no seu ritmo, sem precisar ir até a autoescola.",
+        title: "Orientação sobre a adição de categoria",
+        desc: "A equipe confirma sua documentação e as etapas aplicáveis junto ao Detran-PR.",
       },
       {
         title: "Aulas práticas com veículos compatíveis",
@@ -61,15 +61,15 @@ export const SERVICOS: Record<string, ServicoData> = {
     passos: [
       {
         title: "Solicite seu orçamento de inclusão",
-        desc: "Em 3 perguntas no nosso simulador você recebe o valor exato no WhatsApp.",
+        desc: "Na triagem rápida você informa sua necessidade e recebe orientação e orçamento discriminado no atendimento.",
       },
       {
         title: "Exames médico e psicotécnico (se necessários)",
         desc: "Renovações se sua avaliação anterior estiver vencida ou se a nova categoria exigir.",
       },
       {
-        title: "Curso teórico complementar",
-        desc: "Online pelo app CNH do Brasil, com conteúdo específico da categoria desejada.",
+        title: "Conferência dos requisitos",
+        desc: "Verificação documental e dos exames de aptidão física e mental, com aproveitamento quando permitido.",
       },
       {
         title: "Aulas práticas",
@@ -81,7 +81,7 @@ export const SERVICOS: Record<string, ServicoData> = {
       },
       {
         title: "CNH atualizada com a nova categoria",
-        desc: "Após aprovação, a emissão é feita em até 10 dias úteis.",
+        desc: "Após aprovação e registro, a CNH atualizada é disponibilizada digitalmente pelos canais oficiais.",
       },
     ],
     diferenciais: [
@@ -108,7 +108,7 @@ export const SERVICOS: Record<string, ServicoData> = {
       },
       {
         q: "Preciso refazer o curso teórico inteiro?",
-        a: "Não. Para inclusão você faz apenas o complemento teórico da nova categoria, focado no que ainda não foi abordado. Tudo online pelo app CNH do Brasil.",
+        a: "Não. Para a adição de categoria, a Resolução Contran 1.020/2025 prevê aptidão física e mental, aulas práticas e exame de direção; não prevê curso teórico complementar obrigatório.",
       },
       {
         q: "Quantas aulas práticas preciso fazer?",
@@ -116,7 +116,7 @@ export const SERVICOS: Record<string, ServicoData> = {
       },
       {
         q: "Posso incluir a categoria A já tendo a B?",
-        a: "Sim! É uma das inclusões mais procuradas. Você reaproveita seus exames médicos (se válidos) e faz só o complemento teórico de moto + as aulas práticas.",
+        a: "Sim! É uma das inclusões mais procuradas. Você pode reaproveitar exame de aptidão válido quando permitido e cumprir as aulas práticas e o exame de direção.",
       },
       {
         q: "Vocês oferecem inclusão para C, D ou E?",
@@ -136,49 +136,49 @@ export const SERVICOS: Record<string, ServicoData> = {
     h1: "Curso de Reciclagem de CNH em São José dos Pinhais",
     metaTitle: "Curso de Reciclagem de CNH em São José dos Pinhais | APTOS",
     metaDescription:
-      "Atingiu 20 pontos ou teve sua CNH suspensa? Faça o Curso de Reciclagem na APTOS em São José dos Pinhais. 100% online (EAD), aprovado pelo DETRAN-PR.",
+      "Curso de reciclagem para condutores com suspensão ou outras hipóteses legais, com 45 horas-aula no Paraná. Consulte modalidades autorizadas e disponibilidade na APTOS.",
     heroSubtitle:
-      "Recuperou pontos demais ou teve a CNH suspensa? O Curso de Reciclagem é obrigatório para voltar a dirigir — e na APTOS você faz 100% online, no seu ritmo, com certificação aceita pelo DETRAN-PR.",
+      "Recebeu notificação de suspensão ou determinação para reciclagem? Entenda as etapas, a carga horária atual e as modalidades autorizadas pelo Detran-PR antes da matrícula.",
     porQue:
-      "Sem o Curso de Reciclagem o DETRAN não devolve sua CNH. Quanto antes você inicia, mais rápido volta a dirigir legalmente — e evita multa gravíssima de R$ 880,41 por dirigir suspenso.",
+      "Cumprir as condições da penalidade e os procedimentos de reciclagem aplicáveis é necessário para recuperar o direito de dirigir. Não conduza enquanto estiver suspenso.",
     beneficios: [
       {
-        title: "100% online (EAD) — aprovado pelo DETRAN-PR",
-        desc: "Estude pelo computador ou celular, em qualquer horário, sem precisar ir até a autoescola.",
+        title: "Curso em modalidade autorizada pelo Detran-PR",
+        desc: "Consulte a disponibilidade de aulas presenciais ou EaD síncronas conforme a regulamentação atual.",
       },
       {
-        title: "Faça no seu ritmo",
-        desc: "Sem cronograma rígido. Você pausa e retoma quando puder, dentro do prazo de conclusão.",
+        title: "Acompanhamento da formação",
+        desc: "A carga horária, frequência e avaliações seguem a modalidade autorizada do curso.",
       },
       {
-        title: "Conteúdo completo das 30 horas exigidas",
+        title: "Conteúdo de 45 horas-aula no Paraná",
         desc: "Legislação, direção defensiva, primeiros socorros, meio ambiente, cidadania e relacionamento interpessoal.",
       },
       {
         title: "Certificado emitido rapidamente",
-        desc: "Após aprovação, encaminhamos seu certificado para o DETRAN-PR e você pode voltar a dirigir.",
+        desc: "A conclusão do curso é uma etapa; o retorno à direção exige também o cumprimento da penalidade e a liberação pelo Detran-PR.",
       },
     ],
     passos: [
       {
         title: "Solicite a matrícula no curso",
-        desc: "Pelo nosso simulador você recebe valor e link de pagamento em poucos minutos.",
+        desc: "Solicite pelo atendimento as orientações de matrícula, valores e condições, sem pagamento automático pelo formulário.",
       },
       {
         title: "Acesse a plataforma online",
         desc: "Login e senha enviados por e-mail/WhatsApp para começar imediatamente.",
       },
       {
-        title: "Estude as 30 horas de conteúdo",
+        title: "Estude as 45 horas-aula",
         desc: "Aulas em vídeo, materiais de apoio e exercícios divididos por módulo.",
       },
       {
         title: "Realize a prova final",
-        desc: "Avaliação online dentro da própria plataforma — aprovação com 70% de acertos.",
+        desc: "A avaliação teórica e o registro da conclusão seguem as regras vigentes do Detran-PR.",
       },
       {
         title: "Certificado enviado ao DETRAN-PR",
-        desc: "Você recebe a cópia e seu processo de reabilitação avança automaticamente.",
+        desc: "A conclusão do curso é registrada conforme os procedimentos oficiais, sem dispensar as demais exigências.",
       },
     ],
     diferenciais: [
@@ -188,8 +188,8 @@ export const SERVICOS: Record<string, ServicoData> = {
       "Pagamento facilitado (cartão, PIX, boleto)",
     ],
     publicoAlvo:
-      "Condutores com 20 pontos ou mais na CNH em 12 meses, que cometeram infração gravíssima com suspensão automática, ou cuja CNH foi cassada e precisa ser reaberta.",
-    duracao: "30 horas/aula. Pode ser concluído em poucos dias, conforme sua disponibilidade.",
+      "Condutores submetidos à suspensão, reciclagem preventiva ou a outras hipóteses previstas em lei. A suspensão por pontos pode ocorrer nos limites de 20, 30 ou 40 pontos em 12 meses, conforme o histórico de infrações gravíssimas.",
+    duracao: "45 horas-aula no Paraná, respeitando a frequência e os critérios da modalidade contratada.",
     preRequisitos: [
       "CNH suspensa por pontuação ou infração gravíssima",
       "Notificação de suspensão recebida do DETRAN-PR",
@@ -201,15 +201,15 @@ export const SERVICOS: Record<string, ServicoData> = {
     faqs: [
       {
         q: "Quando preciso fazer o Curso de Reciclagem?",
-        a: "Sempre que sua CNH for suspensa por: 20 pontos ou mais em 12 meses, infração gravíssima de suspensão automática (ex.: dirigir embriagado, racha, excesso de velocidade acima de 50%) ou decisão judicial. Sem o curso o DETRAN não devolve a habilitação.",
+        a: "Em caso de suspensão do direito de dirigir, reciclagem preventiva ou outra determinação legal. A pontuação que pode levar à suspensão depende do histórico de infrações gravíssimas do condutor.",
       },
       {
         q: "O curso pode ser 100% online?",
-        a: "Sim. O DETRAN-PR autoriza a Reciclagem na modalidade EAD desde 2020. A APTOS oferece a plataforma oficial, com certificado válido em todo o Paraná.",
+        a: "A Resolução Contran 1.020/2025 permite modalidades presenciais e EaD síncronas, conforme autorização. A equipe confirma a oferta disponível no momento da contratação.",
       },
       {
         q: "Quanto tempo demora para concluir?",
-        a: "São 30 horas/aula. A maioria dos alunos conclui em 4 a 7 dias, mas você pode fazer no seu ritmo. Não há prazo mínimo, apenas máximo definido pela plataforma.",
+        a: "A carga horária atual no Paraná é de 45 horas-aula. A conclusão depende do calendário, frequência, modalidade e avaliações aplicáveis.",
       },
       {
         q: "Posso dirigir enquanto faço o curso?",
@@ -217,11 +217,11 @@ export const SERVICOS: Record<string, ServicoData> = {
       },
       {
         q: "Preciso ir até a autoescola em algum momento?",
-        a: "Não. Matrícula, aulas, prova e emissão do certificado são totalmente digitais. Você só precisará comparecer ao DETRAN-PR para os trâmites finais de devolução da CNH.",
+        a: "Depende da modalidade autorizada e das exigências do Detran-PR; a equipe orienta eventuais etapas presenciais.",
       },
       {
         q: "Se eu reprovar na prova final, posso refazer?",
-        a: "Sim, a plataforma permite refazer a avaliação até atingir os 70% mínimos. Sem custo adicional.",
+        a: "As condições de avaliação e eventual nova tentativa dependem das normas do Detran-PR e da modalidade autorizada. Consulte antes da matrícula.",
       },
     ],
   },
@@ -235,16 +235,16 @@ export const SERVICOS: Record<string, ServicoData> = {
     metaDescription:
       "Reprovou na prova prática? Refaça com a APTOS em São José dos Pinhais. Aulas focadas no que reprovou, instrutores experientes e suporte no dia do reteste.",
     heroSubtitle:
-      "Foi reprovado no exame prático do DETRAN-PR? Não se desespere. Mais de 30% dos candidatos reprovam na primeira tentativa. Na APTOS você refaz com aulas direcionadas ao que reprovou e volta para o reteste preparado de verdade.",
+      "Foi reprovado no exame prático do Detran-PR? A APTOS oferece preparação dirigida às habilidades que precisam melhorar antes do novo agendamento.",
     porQue:
       "Reprovar é normal — o que faz diferença é o que você faz depois. Vir treinar com instrutores experientes no padrão exato do exame DETRAN-PR aumenta drasticamente as chances de aprovação no reteste.",
     beneficios: [
       {
         title: "Aulas focadas no que você reprovou",
-        desc: "Baliza? Conversão? Rampa? Diagnosticamos onde travou e treinamos isso especificamente.",
+        desc: "Sinalização, conversões, circulação e controle do veículo: o treinamento acompanha as exigências vigentes do Detran-PR.",
       },
       {
-        title: "Simulado no circuito real do DETRAN-PR",
+        title: "Preparação para as habilidades do exame",
         desc: "Nossos instrutores conhecem cada detalhe do circuito de exame. Você chega na prova já familiarizado.",
       },
       {
@@ -266,8 +266,8 @@ export const SERVICOS: Record<string, ServicoData> = {
         desc: "Pacotes de 1, 2, 4 ou mais aulas, conforme seu nível. Você decide quanto quer treinar.",
       },
       {
-        title: "Simulado no circuito real",
-        desc: "Última aula no padrão do exame DETRAN-PR, com pontuação simulada.",
+        title: "Treinamento orientado",
+        desc: "Treinamento de condução segura e feedback do instrutor, sem reproduzir prova oficial.",
       },
       {
         title: "Agendamento do reteste",
@@ -298,7 +298,7 @@ export const SERVICOS: Record<string, ServicoData> = {
     faqs: [
       {
         q: "Reprovei no exame prático. Quando posso fazer o reteste?",
-        a: "O agendamento do reteste pode ser feito a partir de 15 dias após a reprovação, conforme regra do DETRAN-PR. Use esse tempo para treinar com calma na APTOS.",
+        a: "A data depende da disponibilidade e das regras de reagendamento do Detran-PR. Consulte o prazo atualizado no atendimento.",
       },
       {
         q: "Posso fazer o reteste em outra autoescola?",
@@ -306,7 +306,7 @@ export const SERVICOS: Record<string, ServicoData> = {
       },
       {
         q: "Quantas aulas práticas preciso fazer antes do reteste?",
-        a: "Depende. Para erros pontuais (baliza, rampa), 1 a 2 aulas resolvem. Para questões mais amplas (nervosismo, falta de domínio), recomendamos 4 a 5. Avaliamos seu caso na primeira aula.",
+        a: "A quantidade de aulas depende do que o aluno precisa desenvolver. A avaliação orienta um plano de direção segura e adaptação ao veículo.",
       },
       {
         q: "Posso usar o carro da APTOS no exame?",
@@ -318,7 +318,7 @@ export const SERVICOS: Record<string, ServicoData> = {
       },
       {
         q: "Quais são as causas mais comuns de reprovação?",
-        a: "Baliza, rampa de estacionamento, não dar seta, exceder velocidade no circuito interno, frear bruscamente, não checar retrovisor antes de mudar de faixa e nervosismo. Treinamos todos esses pontos.",
+        a: "A prova avalia a observação da sinalização e preferência, controle do veículo, conversões e direção defensiva. A baliza na categoria B e a rampa na A não são mais exigidas no Paraná.",
       },
     ],
   },
@@ -350,13 +350,13 @@ export const SERVICOS: Record<string, ServicoData> = {
       },
       {
         title: "Pacotes flexíveis",
-        desc: "Aulas avulsas, pacotes de 5/10/20 horas, ou combos com simulado no circuito de exame.",
+        desc: "Aulas avulsas e pacotes conforme disponibilidade, com preparação para condução segura e as habilidades avaliadas pelo Detran-PR.",
       },
     ],
     passos: [
       {
-        title: "Solicite o pacote ideal pelo simulador",
-        desc: "Em 3 perguntas você recebe a recomendação personalizada e o valor.",
+        title: "Solicite o pacote ideal pela triagem",
+        desc: "Informe suas necessidades pela triagem e receba uma orientação e orçamento confirmados pela equipe.",
       },
       {
         title: "Avaliação inicial",
@@ -364,11 +364,11 @@ export const SERVICOS: Record<string, ServicoData> = {
       },
       {
         title: "Aulas progressivas",
-        desc: "Pátio → ruas tranquilas → tráfego intenso → baliza → rampa → circuito DETRAN.",
+        desc: "Prática gradual de controle do veículo, circulação, sinalização, conversões e direção defensiva.",
       },
       {
-        title: "Simulado no padrão do exame",
-        desc: "Última aula simula o exame real, com pontuação e feedback completo.",
+        title: "Revisão prática com instrutor",
+        desc: "Revisão das principais habilidades de direção, com feedback individual do instrutor.",
       },
       {
         title: "Acompanhamento até o exame",
@@ -407,7 +407,7 @@ export const SERVICOS: Record<string, ServicoData> = {
       },
       {
         q: "Como funciona a aula de baliza?",
-        a: "A baliza é um dos pontos mais temidos. Treinamos a técnica passo a passo, com referências visuais que funcionam de verdade no circuito DETRAN-PR. A maioria dos alunos domina em 2 a 3 aulas.",
+        a: "A baliza continua sendo uma habilidade útil, mas não é mais exigida no exame da categoria B no Paraná. As aulas priorizam as habilidades atualmente avaliadas.",
       },
       {
         q: "Tem aulas aos sábados?",

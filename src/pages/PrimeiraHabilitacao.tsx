@@ -38,7 +38,7 @@ export const jsonLd = {
       {
         "@type": "FAQPage",
         "mainEntity": [
-          { "@type": "Question", "name": "Quanto custa tirar a primeira habilitação em São José dos Pinhais?", "acceptedAnswer": { "@type": "Answer", "text": "O valor varia conforme a categoria (A, B ou AB) e inclui taxas do DETRAN-PR (exames médico e psicológico R$ 404), aulas práticas e materiais. Fale no WhatsApp (41) 99145-3627 para o orçamento atualizado." } },
+          { "@type": "Question", "name": "Quanto custa tirar a primeira habilitação em São José dos Pinhais?", "acceptedAnswer": { "@type": "Answer", "text": "O valor varia conforme a categoria (A, B ou AB) e inclui taxas do DETRAN-PR (exames médico e psicológico com valor conjunto de R$ 180 no Paraná, conforme Lei 23.259/2026), aulas práticas e materiais. Fale no WhatsApp (41) 99145-3627 para o orçamento atualizado." } },
           { "@type": "Question", "name": "Quanto tempo leva para tirar a CNH com a Resolução 1020/2025?", "acceptedAnswer": { "@type": "Answer", "text": "Depende do seu ritmo: o teórico é 100% online pelo app CNH do Brasil, sem carga horária mínima, e a prática exige apenas 2 horas obrigatórias. Não há mais prazo de 12 meses para concluir." } },
           { "@type": "Question", "name": "Preciso fazer aulas presenciais?", "acceptedAnswer": { "@type": "Answer", "text": "O curso teórico pode ser 100% online pelo app CNH do Brasil. As 2 horas de prática são obrigatoriamente presenciais com instrutor credenciado." } },
           { "@type": "Question", "name": "Qual a idade mínima para tirar CNH?", "acceptedAnswer": { "@type": "Answer", "text": "18 anos completos, saber ler e escrever e possuir CPF." } }
@@ -73,7 +73,7 @@ const PrimeiraHabilitacao = () => {
     {
       icon: Award,
       title: "Prova Prática",
-      description: "Exame de direção no DETRAN. Sem prazo de 12 meses para concluir — vá no seu ritmo!"
+      description: "Após aprovação teórica e formação prática, o exame avalia direção segura no Detran-PR. O prazo máximo de 12 meses do processo foi eliminado."
     }
   ];
 
@@ -249,7 +249,7 @@ const PrimeiraHabilitacao = () => {
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 rounded-full bg-secondary mt-2 flex-shrink-0" />
                     <span className="text-muted-foreground">
-                      <strong className="text-foreground">Exames médico e psicológico</strong> (R$ 404 no PR, teto nacional de R$ 180 em análise jurídica)
+                      <strong className="text-foreground">Exames médico e psicológico</strong> (valor conjunto de R$ 180 no PR, conforme Lei 23.259/2026)
                     </span>
                   </li>
                   <li className="flex items-start gap-3">

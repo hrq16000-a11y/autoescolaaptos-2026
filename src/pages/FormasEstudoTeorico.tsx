@@ -90,11 +90,11 @@ const FormasEstudoTeorico = () => {
   ];
 
   const conteudoCurso = [
-    { titulo: "Legislação de Trânsito", horas: "45h" },
-    { titulo: "Direção Defensiva", horas: "15h" },
-    { titulo: "Primeiros Socorros", horas: "15h" },
-    { titulo: "Meio Ambiente e Cidadania", horas: "10h" },
-    { titulo: "Mecânica Básica", horas: "10h" }
+    { titulo: "Legislação de Trânsito" },
+    { titulo: "Direção Defensiva" },
+    { titulo: "Primeiros Socorros" },
+    { titulo: "Meio Ambiente e Cidadania" },
+    { titulo: "Mecânica Básica" }
   ];
 
   return (
@@ -260,15 +260,14 @@ const FormasEstudoTeorico = () => {
                   <Card className="p-6 text-center h-full">
                     <Clock className="w-8 h-8 text-primary mx-auto mb-3" />
                     <h3 className="font-heading font-bold mb-2 text-sm">{item.titulo}</h3>
-                    <p className="text-2xl font-bold text-primary">{item.horas}</p>
+                    <p className="text-sm font-semibold text-primary">Tema de estudo</p>
                   </Card>
                 </motion.div>
               ))}
             </div>
 
             <p className="text-center text-sm text-muted-foreground mt-8 max-w-2xl mx-auto">
-              * A carga horária e conteúdo programático seguem as diretrizes do CONTRAN e podem 
-              ter especificidades conforme regulamentação do DETRAN estadual.
+              * A formação teórica deve seguir o conteúdo oficial vigente e a modalidade autorizada. A carga horária não é mais apresentada como tabela obrigatória de horas por matéria.
             </p>
           </div>
         </section>
