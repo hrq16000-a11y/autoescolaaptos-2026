@@ -19,8 +19,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
-      - run: npm ci --no-audit --no-fund
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
       - run: node scripts/check-triagem-safety.mjs
       - run: node scripts/test-safe-next.mjs
       - run: node --experimental-strip-types --test tests/admin-marketing-optins.test.mjs
@@ -29,5 +29,6 @@ jobs:
       - run: node --test tests/apps-script-optins.test.mjs
       - run: node --test tests/offers-original-sheets-flow.test.mjs
       - run: node --test tests/ofertas-atribuicao.test.mjs
+      - run: node --test tests/inclusao-moto.test.mjs
       - run: npm run ${{ matrix.command }}
 
