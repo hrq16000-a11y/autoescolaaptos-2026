@@ -164,7 +164,7 @@ export const faqData: FAQItem[] = [
   {
     category: "Reciclagem",
     question: "Posso fazer 100% online?",
-    answer: "Sim. A APTOS oferece o curso na modalidade EAD aprovada pelo DETRAN-PR. Você estuda pelo celular ou computador, no seu ritmo."
+    answer: "O Detran-PR permite que o curso de reciclagem seja realizado presencialmente ou a distância (EaD). Na modalidade EaD, após concluir 45 horas-aula, é necessário agendar e realizar a prova eletrônica conforme as regras do órgão. Confirme a oferta disponível na APTOS antes de contratar."
   },
   {
     category: "Reciclagem",
@@ -174,7 +174,7 @@ export const faqData: FAQItem[] = [
   {
     category: "Reciclagem",
     question: "Se eu reprovar na prova final, posso refazer?",
-    answer: "Sim. A plataforma EAD permite refazer a avaliação até atingir os 70% mínimos. Sem custo adicional."
+    answer: "Na modalidade EaD, o Detran-PR exige prova eletrônica de 30 questões e mínimo de 21 acertos. Em caso de reprovação, a segunda prova ocorre após 5 dias e exige nova taxa; novas reprovações podem exigir refazer o curso. Consulte as regras no atendimento oficial."
   },
 
   // ========================= RETESTE =========================
