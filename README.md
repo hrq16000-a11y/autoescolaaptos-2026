@@ -79,12 +79,12 @@ A identidade visual oficial e as regras de uso da marca estão documentadas em [
 
 ## Atualizações independentes pelo GitHub
 
-O código pode ser atualizado sem prompts no Lovable: branch → revisão → build → merge.
+O código pode ser atualizado sem prompts no Lovable: branch → revisão → build → merge. O repositório oficial sincronizado é `hrq16000-a11y/autoescolaaptos-2026`.
 Evite editar os mesmos arquivos simultaneamente no Lovable e no GitHub.
 
 ```sh
-npm ci
-npm run build:standalone
+bun install --frozen-lockfile
+bun run build:standalone
 ```
 
 O build independente gera `dist/` sem carregar os plugins de MCP e marcação visual do Lovable.
@@ -98,3 +98,5 @@ Nunca use chave service-role em variáveis `VITE_`.
 Para hospedagem externa, configure fallback das rotas SPA para `index.html` e valide login,
 redirecionamentos OAuth, formulários e WhatsApp em preview antes de trocar domínio.
 Esta etapa não altera hospedagem, domínio nem migra o framework para TanStack Start.
+
+<!-- Aptos Git sync probe 2026-11-10: documentation-only notification to synchronize main with the connected Lovable project; no application code, DNS or deployment change. GitHub main and lovable-sync matched at e08f877 before this probe. -->
