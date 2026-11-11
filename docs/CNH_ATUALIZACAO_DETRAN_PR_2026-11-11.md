@@ -14,6 +14,7 @@ Retirada do quiz `/simulado-detran-pr`, conteúdo desatualizado em FAQ, Home, se
 - [Detran-PR — exame toxicológico primeira CNH A/B desde junho de 2026](https://www.detran.pr.gov.br/Noticia/Detran-PR-reforca-que-exame-toxicologico-e-obrigatorio-para-tirar-CNH-de-carro-e-moto).
 - [Detran-PR — Lei 23.259/2026 sobre exames médico e psicológico](https://www.detran.pr.gov.br/Noticia/Governador-sanciona-lei-que-reduz-em-55-valor-dos-exames-de-obtencao-e-renovacao-da-CNH).
 - [Detran-PR — instrutor de trânsito autônomo](https://www.detran.pr.gov.br/Pagina/Instrutor-de-Transito-Autonomo).
+- [Detran-PR — agendar curso de reciclagem](https://www.detran.pr.gov.br/servicos/Motorista/Reciclagem/Agendar-curso-de-reciclagem-ybrzPqN4): presencial e EaD disponíveis; 45 horas-aula. Após EaD, prova eletrônica (30 questões, 21 acertos), taxa e agendamento próprio; nova tentativa após 5 dias com taxa adicional em caso de reprovação.
 
 ## Gates e pendências editoriais
 
