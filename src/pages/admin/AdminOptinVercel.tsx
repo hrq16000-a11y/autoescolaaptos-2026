@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import { fetchAllMarketingVercelRecords, marketingVercelCsv } from "@/lib/marketingVercelExport";
 
 type Optin = {
   id: string;
@@ -12,13 +13,6 @@ type Optin = {
 type Page = { records: Optin[]; cursor: string | null; hasMore: boolean; message?: string };
 
 const API = "https://autoescolaaptos-marketing-api-msolus.vercel.app/api/admin-marketing-optins";
-
-function escapeCsv(value: unknown) {
-  let text = value === null || value === undefined ? "" : String(value);
-  // Proteção contra fórmulas executadas por leitores de planilhas.
-  if (/^[=+\-@\t\r]/.test(text)) text = "'" + text;
-  return '"' + text.replace(/"/g, '""') + '"';
-}
 
 function formatPhone(value: string) {
   if (/^\d{11}$/.test(value)) {
@@ -36,6 +30,9 @@ export default function AdminOptinVercel() {
   const [filter, setFilter] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [exporting, setExporting] = useState(false);
+  const [exportCount, setExportCount] = useState(0);
+  const [exportMessage, setExportMessage] = useState("");
 
   const rows = useMemo(() => {
     const q = filter.replace(/\D/g, "");
@@ -75,19 +72,36 @@ export default function AdminOptinVercel() {
     }
   }
 
-  function exportCsv() {
-    const columns = ["created_at", "telefone", "campaign_source", "lgpd_aceite"];
-    const csv = [
-      columns.join(","),
-      ...rows.map(r => columns.map(c => escapeCsv(r[c as keyof Optin])).join(",")),
-    ].join("\r\n");
+  function downloadCsv(items: Optin[], filename: string) {
+    const csv = marketingVercelCsv(items);
     const blob = new Blob(["\ufeff", csv], { type: "text/csv;charset=utf-8" });
     const fileUrl = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = fileUrl;
-    link.download = "aptos-ofertas-vercel-pagina.csv";
+    link.download = filename;
     link.click();
-    URL.revokeObjectURL(fileUrl);
+    window.setTimeout(() => URL.revokeObjectURL(fileUrl), 1500);
+  }
+
+  function exportCsv() {
+    downloadCsv(rows, "aptos-ofertas-vercel-registros-carregados.csv");
+  }
+
+  async function exportAllCsv() {
+    if (loading || exporting || !authed) return;
+    setExporting(true);
+    setExportCount(0);
+    setExportMessage("");
+    setError("");
+    try {
+      const all = await fetchAllMarketingVercelRecords(API, token, setExportCount);
+      downloadCsv(all, "aptos-ofertas-vercel-todos-" + new Date().toISOString().slice(0, 10) + ".csv");
+      setExportMessage("Backup de todas as páginas concluído: " + all.length + " cadastros.");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Backup interrompido.");
+    } finally {
+      setExporting(false);
+    }
   }
 
   function logout() {
@@ -97,6 +111,7 @@ export default function AdminOptinVercel() {
     setCursor(null);
     setHasMore(false);
     setError("");
+    setExportMessage("");
   }
 
   return (
@@ -126,11 +141,15 @@ export default function AdminOptinVercel() {
         ) : (
           <section className="space-y-4">
             <div className="flex flex-wrap gap-3 items-center">
-              <button onClick={() => void load()} disabled={loading}
+              <button onClick={() => void load()} disabled={loading || exporting}
                 className="rounded-md border px-4 py-2">Atualizar</button>
-              <button onClick={exportCsv} disabled={rows.length === 0}
+              <button onClick={exportCsv} disabled={rows.length === 0 || exporting}
                 className="rounded-md border px-4 py-2 disabled:opacity-50">Exportar CSV (registros carregados)</button>
-              <button onClick={logout} className="rounded-md border px-4 py-2">Sair</button>
+              <button onClick={() => void exportAllCsv()} disabled={loading || exporting}
+                className="rounded-md bg-primary text-primary-foreground px-4 py-2 disabled:opacity-50">
+                {exporting ? "Lendo " + exportCount + " cadastros..." : "Backup de todos os cadastros (CSV)"}
+              </button>
+              <button onClick={logout} disabled={exporting} className="rounded-md border px-4 py-2 disabled:opacity-50">Sair</button>
             </div>
             <label htmlFor="filterOptin" className="block text-sm">
               Filtrar telefone ou origem — apenas registros carregados
@@ -161,9 +180,10 @@ export default function AdminOptinVercel() {
             </button>}
           </section>
         )}
+        {exportMessage && <p role="status" className="rounded-lg border p-3 text-sm">{exportMessage}</p>}
         {error && <p role="alert" className="rounded-lg border border-destructive p-3 text-sm text-destructive">{error}</p>}
         <p className="text-xs text-muted-foreground">
-          Este painel não envia ofertas nem mensagens de WhatsApp. A exportação contém apenas os itens carregados.
+          Este painel não envia ofertas nem mensagens de WhatsApp. O backup total lê todas as páginas e inclui ID, data, telefone, origem e consentimento. Outros metadados privados do Blob não são exportados. Guarde o CSV em local seguro.
         </p>
       </div>
     </main>
