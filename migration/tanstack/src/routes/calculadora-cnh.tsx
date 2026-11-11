@@ -7,7 +7,7 @@ import { pageHead } from '../page-head';
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Simulador de Jornada CNH | Autoescola APTOS',
+  name: 'Planejador de Jornada CNH | Autoescola APTOS',
   url: 'https://autoescolaaptos.com.br/calculadora-cnh',
   isPartOf: {
     '@type': 'WebSite',
@@ -18,8 +18,8 @@ const jsonLd = {
 
 export const Route = createFileRoute('/calculadora-cnh')({
   head: () => pageHead(
-    'Simulador de Jornada CNH — Autoescola APTOS em São José dos Pinhais',
-    'Planeje as etapas estimadas da CNH com o simulador APTOS: exames, estudo, aulas práticas e prova. Consulte a equipe para orçamento e disponibilidade.',
+    'Planejador de Jornada CNH — Autoescola APTOS em São José dos Pinhais',
+    'Planeje as etapas estimadas da CNH com o planejador APTOS: exames, estudo, aulas práticas e prova. Consulte a equipe para orçamento e disponibilidade.',
     '/calculadora-cnh',
     jsonLd,
   ),
