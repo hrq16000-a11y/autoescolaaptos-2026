@@ -91,12 +91,11 @@ O build independente gera `dist/` sem carregar os plugins de MCP e marcação vi
 O comando habitual `npm run build` mantém as integrações existentes.
 Este build não inclui o servidor MCP; ele exige hospedagem própria se for necessário fora do Lovable.
 Login Google ainda usa a integração Lovable: build independente não significa independência total de autenticação.
-Supabase, funções, dados e configurações atuais são preservados. Configure as variáveis públicas
-`VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY` e `VITE_SUPABASE_PROJECT_ID` no ambiente de build.
-Nunca use chave service-role em variáveis `VITE_`.
+O banco e as Edge Functions deste projeto são **gerenciados pelo Lovable Cloud**. Não crie outra conta Supabase nem exija `SUPABASE_ACCESS_TOKEN` ou acesso externo ao banco para publicar o portal.
+Mudanças em funções e banco devem ser feitas pelo Lovable, com validação e preservação dos cadastros. O repositório mantém apenas o código e o histórico das funções; o workflow legado de deploy externo foi aposentado.
+Se o site for compilado em ambiente independente, as configurações públicas de acesso ao Lovable Cloud (`VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY`, `VITE_SUPABASE_PROJECT_ID`) precisam refletir o ambiente **já existente**, sem novas contas ou bancos. Nunca exponha `service_role` em variáveis `VITE_`.
 
 Para hospedagem externa, configure fallback das rotas SPA para `index.html` e valide login,
 redirecionamentos OAuth, formulários e WhatsApp em preview antes de trocar domínio.
 Esta etapa não altera hospedagem, domínio nem migra o framework para TanStack Start.
 
-<!-- Aptos Git sync probe 2026-11-10: documentation-only notification to synchronize main with the connected Lovable project; no application code, DNS or deployment change. GitHub main and lovable-sync matched at e08f877 before this probe. -->
