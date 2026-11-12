@@ -34,8 +34,8 @@ export const jsonLd = {
         "@type": "FAQPage",
         "mainEntity": [
           { "@type": "Question", "name": "Quantas questões tem o exame teórico do DETRAN PR?", "acceptedAnswer": { "@type": "Answer", "text": "30 questões em 60 minutos (120 min para candidatos com dislexia, TDAH ou TEA). A aprovação exige 20 acertos, conforme Resolução CONTRAN 1020/2025." } },
-          { "@type": "Question", "name": "Quanto tempo dura a prova prática do DETRAN?", "acceptedAnswer": { "@type": "Answer", "text": "Em média 20 a 30 minutos por candidato, incluindo a baliza e o percurso em via pública avaliado pelo examinador." } },
-          { "@type": "Question", "name": "Se eu for reprovado, quando posso refazer o exame?", "acceptedAnswer": { "@type": "Answer", "text": "No DETRAN-PR é necessário aguardar o reagendamento e pagar nova taxa. A previsão de reteste gratuito da Res. 1020/2025 ainda depende de implementação técnica no estado." } },
+          { "@type": "Question", "name": "Quanto tempo dura a prova prática do DETRAN?", "acceptedAnswer": { "@type": "Answer", "text": "O tempo e o trajeto são definidos pelo Detran-PR; a baliza não é mais exigida na categoria B no Paraná." } },
+          { "@type": "Question", "name": "Se eu for reprovado, quando posso refazer o exame?", "acceptedAnswer": { "@type": "Answer", "text": "Consulte a disponibilidade, o prazo e a cobrança vigente diretamente no Detran-PR. Não presuma taxa ou gratuidade sem confirmação." } },
           { "@type": "Question", "name": "Quais são as faltas eliminatórias?", "acceptedAnswer": { "@type": "Answer", "text": "Desobedecer sinalização de parada, avançar sobre meio-fio, não usar cinto de segurança ou perder o controle do veículo, entre outras." } }
         ]
       }
@@ -45,17 +45,17 @@ export const jsonLd = {
 const ExamesDetran = () => {
 
   const topicosProvaTeórica = [
-    { tema: "Legislação de Trânsito", questoes: "18 questões" },
-    { tema: "Direção Defensiva", questoes: "4 questões" },
-    { tema: "Primeiros Socorros", questoes: "3 questões" },
-    { tema: "Meio Ambiente", questoes: "3 questões" },
-    { tema: "Mecânica Básica", questoes: "2 questões" }
+    { tema: "Legislação de Trânsito", questoes: "Tema de estudo" },
+    { tema: "Direção Defensiva", questoes: "Tema de estudo" },
+    { tema: "Primeiros Socorros", questoes: "Tema de estudo" },
+    { tema: "Meio Ambiente", questoes: "Tema de estudo" },
+    { tema: "Mecânica Básica", questoes: "Tema de estudo" }
   ];
 
   const criteriosProvaPratica = [
     {
       categoria: "Faltas Eliminatórias",
-      descricao: "Causam reprovação imediata",
+      descricao: "Conforme os critérios oficiais do Detran-PR",
       exemplos: [
         "Desobedecer sinalização de parada",
         "Avançar sobre meio-fio",
@@ -66,7 +66,7 @@ const ExamesDetran = () => {
     },
     {
       categoria: "Faltas Graves",
-      descricao: "3 pontos negativos cada",
+      descricao: "Conforme critérios oficiais",
       exemplos: [
         "Não observar trânsito em mudança de faixa",
         "Desrespeitar faixa de pedestres",
@@ -76,17 +76,17 @@ const ExamesDetran = () => {
     },
     {
       categoria: "Faltas Médias",
-      descricao: "2 pontos negativos cada",
+      descricao: "Conforme critérios oficiais",
       exemplos: [
         "Executar conversão incorretamente",
         "Usar incorretamente os retrovisores",
-        "Parar distante da guia (baliza)"
+        "Não observar as condições de segurança na parada"
       ],
       cor: "yellow"
     },
     {
       categoria: "Faltas Leves",
-      descricao: "1 ponto negativo cada",
+      descricao: "Conforme critérios oficiais",
       exemplos: [
         "Manejo irregular do câmbio",
         "Posicionamento incorreto no volante",
@@ -194,7 +194,7 @@ const ExamesDetran = () => {
                     </div>
                     <div className="flex items-center gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary" />
-                      <span>Aprovação com <strong>mínimo de 70%</strong> (21 acertos)</span>
+                      <span>Aprovação com <strong>20 acertos em 30 questões</strong></span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Clock className="w-5 h-5 text-primary" />
@@ -202,7 +202,7 @@ const ExamesDetran = () => {
                     </div>
                   </div>
 
-                  <h4 className="font-heading font-bold mb-4">Distribuição das Questões</h4>
+                  <h4 className="font-heading font-bold mb-4">Principais temas de estudo</h4>
                   <div className="space-y-3">
                     {topicosProvaTeórica.map((item, index) => (
                       <div key={index} className="flex justify-between items-center py-2 border-b border-border last:border-0">
@@ -228,8 +228,8 @@ const ExamesDetran = () => {
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                       <div>
-                        <strong className="text-foreground">Pratique com simulados</strong>
-                        <p className="text-sm text-muted-foreground">Nossos simulados seguem o formato da prova oficial</p>
+                        <strong className="text-foreground">Revise os conteúdos oficiais</strong>
+                        <p className="text-sm text-muted-foreground">Utilize o material do app oficial CNH do Brasil e as orientações do Detran-PR</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
@@ -294,7 +294,7 @@ const ExamesDetran = () => {
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                        Manobras (baliza, conversões, ladeira)
+                        Conversões, circulação e controle do veículo
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-primary" />
@@ -311,7 +311,7 @@ const ExamesDetran = () => {
                       </li>
                       <li className="flex items-center gap-2">
                         <CheckCircle2 className="w-4 h-4 text-green-500" />
-                        Máximo de 3 pontos negativos
+                        Critérios e pontuação conforme as regras atuais do Detran-PR
                       </li>
                       <li className="flex items-center gap-2">
                         <Clock className="w-4 h-4 text-primary" />
@@ -384,11 +384,11 @@ const ExamesDetran = () => {
                     <ul className="space-y-3 mt-4">
                       <li className="flex items-start gap-3">
                         <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
-                        <span>O processo de habilitação tem validade de 12 meses a partir da abertura</span>
+                        <span>O prazo máximo de 12 meses para concluir a primeira habilitação foi eliminado</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
-                        <span>Não há limite de tentativas dentro do prazo de validade</span>
+                        <span>Retestes dependem da disponibilidade e das normas atuais do Detran-PR</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />

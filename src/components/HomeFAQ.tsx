@@ -23,7 +23,7 @@ const HOME_FAQS = [
   },
   {
     q: "Quais os documentos necessários para começar?",
-    a: "RG (ou CNH, se já habilitado), CPF e comprovante de residência atualizado. A APTOS abre o processo diretamente no DETRAN-PR para você — não é necessário ir até o órgão nas primeiras etapas.",
+    a: "RG (ou CNH, se já habilitado), CPF e comprovante de residência atualizado. A APTOS orienta sua documentação e as etapas, enquanto a validação de identidade, biometria e abertura formal seguem os canais vigentes do Detran-PR.",
   },
   {
     q: "Quantas aulas práticas são obrigatórias hoje?",
@@ -39,7 +39,7 @@ const HOME_FAQS = [
   },
   {
     q: "O curso teórico é online?",
-    a: "Sim. Após a Resolução 1020/2025, o curso teórico é feito pelo aplicativo oficial CNH do Brasil, de forma 100% online e no seu ritmo. A APTOS orienta você em cada etapa e prepara para a prova teórica no DETRAN-PR.",
+    a: "Sim. O conteúdo teórico pode ser cursado de forma digital gratuitamente pelo aplicativo oficial CNH do Brasil ou por outras modalidades autorizadas. A APTOS orienta você em cada etapa e prepara para a prova teórica no DETRAN-PR.",
   },
   {
     q: "Como faço para começar agora?",

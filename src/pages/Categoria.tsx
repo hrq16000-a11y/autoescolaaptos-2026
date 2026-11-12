@@ -31,17 +31,17 @@ export const CATEGORIAS: Record<Slug, CategoriaData> = {
     nome: "Categoria A — Moto",
     icon: Bike,
     hero: "CNH Categoria A em São José dos Pinhais",
-    subtitle: "Habilitação para motos, scooters e ciclomotores acima de 50 cilindradas. Curso completo na APTOS, com aprovação acima da média do DETRAN-PR.",
-    veiculos: "Motos, motonetas, scooters e ciclomotores acima de 50 cilindradas.",
+    subtitle: "Habilitação para motocicletas, motonetas e scooters, conforme a categoria A. Curso completo na APTOS, com aprovação acima da média do DETRAN-PR.",
+    veiculos: "Motocicletas, motonetas e ciclomotores permitidos pela categoria A.",
     idadeMin: "18 anos completos",
     beneficios: [
       "Aulas práticas em pista exclusiva, com equipamento de segurança",
-      "Simulado real do circuito do DETRAN-PR",
+      "Preparação para as habilidades atuais do exame",
       "Instrutores experientes em duas rodas",
       "Curso teórico online pelo app CNH do Brasil",
     ],
     passos: [
-      "Solicite seu orçamento da Categoria A pelo nosso simulador",
+      "Solicite seu orçamento da Categoria A pelo nossa triagem de atendimento",
       "Matrícula e exames médico e psicotécnico",
       "Curso teórico online (app CNH do Brasil)",
       "Exame teórico no DETRAN-PR",
@@ -50,8 +50,8 @@ export const CATEGORIAS: Record<Slug, CategoriaData> = {
     ],
     faqs: [
       { q: "Qual a idade mínima para tirar CNH Categoria A?", a: "18 anos completos, conforme o Código de Trânsito Brasileiro." },
-      { q: "Posso tirar A e B juntas?", a: "Sim! Optar pela Categoria AB sai mais barato do que tirar A e B separadas. Solicite o orçamento da AB no nosso simulador." },
-      { q: "Quanto custa a CNH A na APTOS?", a: "O valor depende de taxas do DETRAN-PR e da forma de pagamento. Responda 3 perguntas no nosso simulador e receba o valor exato no WhatsApp." },
+      { q: "Posso tirar A e B juntas?", a: "Sim! Optar pela Categoria AB sai mais barato do que tirar A e B separadas. Solicite o orçamento da AB no nossa triagem de atendimento." },
+      { q: "Quanto custa a CNH A na APTOS?", a: "O valor depende de taxas do DETRAN-PR e da forma de pagamento. Responda 3 perguntas no nossa triagem de atendimento e receba orientação e orçamento confirmado no atendimento." },
     ],
   },
   b: {
@@ -66,11 +66,11 @@ export const CATEGORIAS: Record<Slug, CategoriaData> = {
     beneficios: [
       "Opções de aulas em carro manual e automático",
       "Instrutores credenciados pelo DETRAN-PR",
-      "Treino de baliza no padrão atual do exame",
+      "Treino de sinalização, conversões e direção segura",
       "Curso teórico 100% online pelo app CNH do Brasil",
     ],
     passos: [
-      "Solicite seu orçamento da Categoria B pelo nosso simulador",
+      "Solicite seu orçamento da Categoria B pelo nossa triagem de atendimento",
       "Matrícula e exames médico e psicotécnico",
       "Curso teórico online (app CNH do Brasil)",
       "Exame teórico no DETRAN-PR (30 questões, aprovação com 20)",
@@ -99,7 +99,7 @@ export const CATEGORIAS: Record<Slug, CategoriaData> = {
       "Liberdade total: dirija qualquer veículo leve",
     ],
     passos: [
-      "Solicite seu orçamento da Categoria AB pelo nosso simulador",
+      "Solicite seu orçamento da Categoria AB pelo nossa triagem de atendimento",
       "Matrícula única para as duas categorias",
       "Curso teórico online (vale para A e B)",
       "Exame teórico no DETRAN-PR",

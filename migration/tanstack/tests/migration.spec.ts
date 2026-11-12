@@ -154,9 +154,9 @@ test('CNH journey calculator hydrates, simulates steps and opens budget modal wi
   });
   const response = await page.goto('/calculadora-cnh');
   expect(response?.status()).toBe(200);
-  await expect(page).toHaveTitle(/Simulador de Jornada CNH/);
+  await expect(page).toHaveTitle(/Planejador de Jornada CNH/);
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'noindex, nofollow');
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('Simulador de Jornada CNH');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('Planejador de Jornada CNH');
   const next = page.getByRole('button', { name: 'Próximo' });
   await expect(next).toBeDisabled();
   await page.getByRole('button', { name: /1ª Habilitação/ }).click();

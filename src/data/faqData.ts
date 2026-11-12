@@ -29,7 +29,7 @@ export const faqData: FAQItem[] = [
   {
     category: "Primeira Habilitação",
     question: "Como inicio o processo pela APTOS?",
-    answer: "Pelo nosso simulador você responde 3 perguntas (categoria, prazo e experiência) e recebe valor e próximos passos no WhatsApp. A partir dali, abrimos seu processo no DETRAN-PR."
+    answer: "Pela nossa triagem de atendimento você informa categoria, prazo e experiência. A equipe explica as etapas e o orçamento; a abertura formal e a coleta de dados são feitas conforme o procedimento vigente do Detran-PR."
   },
   {
     category: "Primeira Habilitação",
@@ -51,12 +51,12 @@ export const faqData: FAQItem[] = [
   {
     category: "Categoria A",
     question: "O que dá direito a Categoria A?",
-    answer: "Permite dirigir motos, motonetas, scooters e ciclomotores acima de 50 cilindradas. Idade mínima: 18 anos."
+    answer: "Habilita para motocicletas, motonetas e ciclomotores permitidos pela categoria A. A primeira habilitação exige 18 anos completos."
   },
   {
     category: "Categoria A",
     question: "Quanto custa tirar a CNH A em São José dos Pinhais?",
-    answer: "Depende das taxas atuais do DETRAN-PR e da forma de pagamento. Responda 3 perguntas no nosso simulador e receba o valor exato no WhatsApp."
+    answer: "O preço depende dos serviços contratados e das taxas oficiais. Solicite um orçamento discriminado pela triagem de atendimento, sem promessas de valor fixo para taxas públicas."
   },
   {
     category: "Categoria A",
@@ -88,7 +88,7 @@ export const faqData: FAQItem[] = [
   {
     category: "Categoria B",
     question: "Como funciona o exame teórico do DETRAN-PR para a B?",
-    answer: "São 30 questões em 60 minutos, com aprovação a partir de 20 acertos. Candidatos com dislexia, TDAH ou TEA têm 120 minutos."
+    answer: "A prova teórica tem 30 questões, duração padrão de 60 minutos e aprovação a partir de 20 acertos. Há tempo ampliado para candidatos enquadrados nos critérios de acessibilidade do Detran-PR."
   },
   {
     category: "Categoria B",
@@ -120,7 +120,7 @@ export const faqData: FAQItem[] = [
   {
     category: "Categoria AB",
     question: "Quanto custa a CNH AB em São José dos Pinhais?",
-    answer: "É mais econômico que tirar A e B separadas. O valor depende de taxas DETRAN-PR e forma de pagamento — solicite seu orçamento no simulador."
+    answer: "O valor depende do plano contratado, dos exames e das taxas vigentes. Solicite orçamento discriminado para as duas categorias pelo atendimento da APTOS."
   },
 
   // ========================= INCLUSÃO =========================
@@ -132,7 +132,7 @@ export const faqData: FAQItem[] = [
   {
     category: "Inclusão",
     question: "Posso incluir a categoria A já tendo a B?",
-    answer: "Sim. É a inclusão mais comum. Aproveita exames médicos válidos e exige apenas o complemento teórico de moto + aulas práticas."
+    answer: "Sim. A adição da categoria A prevê exame de aptidão física e mental (com possibilidade de reaproveitamento se válido), aulas práticas e exame de direção. A Resolução Contran 1.020/2025 não prevê complemento teórico obrigatório nessa modalidade."
   },
   {
     category: "Inclusão",
@@ -154,17 +154,17 @@ export const faqData: FAQItem[] = [
   {
     category: "Reciclagem",
     question: "Quando preciso fazer o Curso de Reciclagem?",
-    answer: "Quando atinge 20 pontos ou mais na CNH em 12 meses, ou comete infração gravíssima com suspensão automática (embriaguez, racha, excesso de velocidade acima de 50%)."
+    answer: "A reciclagem pode ser exigida em casos de suspensão, por determinação da autoridade de trânsito e outras hipóteses legais. A suspensão por pontos considera o limite aplicável ao seu histórico (20, 30 ou 40 pontos em 12 meses, conforme infrações gravíssimas)."
   },
   {
     category: "Reciclagem",
     question: "Quantas horas tem o curso?",
-    answer: "30 horas/aula, abordando legislação, direção defensiva, primeiros socorros, meio ambiente, cidadania e relacionamento interpessoal no trânsito."
+    answer: "No Paraná, a carga horária do curso de reciclagem passou a 45 horas-aula em 2026. Consulte a modalidade e o procedimento atual de inscrição no Detran-PR."
   },
   {
     category: "Reciclagem",
     question: "Posso fazer 100% online?",
-    answer: "Sim. A APTOS oferece o curso na modalidade EAD aprovada pelo DETRAN-PR. Você estuda pelo celular ou computador, no seu ritmo."
+    answer: "O Detran-PR permite que o curso de reciclagem seja realizado presencialmente ou a distância (EaD). Na modalidade EaD, após concluir 45 horas-aula, é necessário agendar e realizar a prova eletrônica conforme as regras do órgão. Confirme a oferta disponível na APTOS antes de contratar."
   },
   {
     category: "Reciclagem",
@@ -174,14 +174,14 @@ export const faqData: FAQItem[] = [
   {
     category: "Reciclagem",
     question: "Se eu reprovar na prova final, posso refazer?",
-    answer: "Sim. A plataforma EAD permite refazer a avaliação até atingir os 70% mínimos. Sem custo adicional."
+    answer: "Na modalidade EaD, o Detran-PR exige prova eletrônica de 30 questões e mínimo de 21 acertos. Em caso de reprovação, a segunda prova ocorre após 5 dias e exige nova taxa; novas reprovações podem exigir refazer o curso. Consulte as regras no atendimento oficial."
   },
 
   // ========================= RETESTE =========================
   {
     category: "Reteste",
     question: "Reprovei no exame prático. Quando posso refazer?",
-    answer: "O reteste pode ser agendado a partir de 15 dias após a reprovação, conforme regra do DETRAN-PR."
+    answer: "O reteste depende do agendamento disponível e das regras vigentes do Detran-PR. Consulte o órgão antes de considerar um prazo fixo ou a cobrança de taxa."
   },
   {
     category: "Reteste",
@@ -191,7 +191,7 @@ export const faqData: FAQItem[] = [
   {
     category: "Reteste",
     question: "Quantas aulas preciso antes do reteste?",
-    answer: "Depende da causa da reprovação. Erros pontuais (baliza, rampa): 1 a 2 aulas. Insegurança geral: 4 a 5 aulas. Avaliamos seu caso na primeira aula."
+    answer: "Depende dos pontos a melhorar no exame de direção. A equipe pode orientar o treinamento para condução, sinalização, conversões, frenagem e segurança, sem prometer uma quantidade fixa."
   },
   {
     category: "Reteste",
@@ -201,7 +201,7 @@ export const faqData: FAQItem[] = [
   {
     category: "Reteste",
     question: "Quais erros mais reprovam no exame prático?",
-    answer: "Baliza, rampa de estacionamento, não dar seta, frear bruscamente, não usar retrovisor antes de mudar de faixa, ultrapassar velocidade no circuito interno e nervosismo geral."
+    answer: "O exame avalia o domínio seguro do veículo, a atenção à sinalização e à preferência, as conversões e a condução defensiva. No Paraná, a baliza na categoria B e a rampa na categoria A deixaram de ser exigidas."
   },
 
   // ========================= AULAS PRÁTICAS =========================
@@ -213,7 +213,7 @@ export const faqData: FAQItem[] = [
   {
     category: "Aulas Práticas",
     question: "Posso pagar aulas avulsas?",
-    answer: "Sim. Pacotes flexíveis: avulsa, 5 aulas, 10 aulas, 20 aulas ou combo com simulado de circuito DETRAN-PR."
+    answer: "Consulte a APTOS sobre aulas avulsas e pacotes de treinamento, com orientação de percurso e direção segura. Valores e disponibilidade são confirmados no atendimento."
   },
   {
     category: "Aulas Práticas",
@@ -223,7 +223,7 @@ export const faqData: FAQItem[] = [
   {
     category: "Aulas Práticas",
     question: "As aulas são em pista ou em rua?",
-    answer: "Começamos no pátio (para iniciantes), passamos para ruas tranquilas, depois tráfego intenso e finalizamos com simulado no circuito DETRAN-PR."
+    answer: "A preparação combina ambientes adequados ao nível do aluno e às regras de segurança. O percurso e as condições de avaliação seguem as orientações atuais do Detran-PR."
   },
   {
     category: "Aulas Práticas",
@@ -233,14 +233,14 @@ export const faqData: FAQItem[] = [
   {
     category: "Aulas Práticas",
     question: "Como funciona a aula de baliza?",
-    answer: "Treinamos a técnica passo a passo com referências visuais reais (cones, ângulos). A maioria dos alunos domina em 2 a 3 aulas focadas."
+    answer: "A baliza pode ser ensinada como habilidade útil de estacionamento, mas deixou de ser exigida no exame prático da categoria B no Paraná. A equipe prioriza as manobras e competências cobradas atualmente."
   },
 
   // ========================= EXAMES =========================
   {
     category: "Exames",
     question: "Quais exames preciso fazer para tirar a CNH?",
-    answer: "Exame médico, exame psicotécnico, exame teórico (no DETRAN-PR) e exame prático de direção (no DETRAN-PR)."
+    answer: "Na primeira habilitação são exigidas avaliações médica e psicológica, prova teórica e exame prático; para processos abertos no Paraná desde 01/06/2026, também é obrigatório o exame toxicológico de larga janela de detecção nas categorias A e B."
   },
   {
     category: "Exames",
@@ -260,7 +260,7 @@ export const faqData: FAQItem[] = [
   {
     category: "Exames",
     question: "Como é o exame prático no DETRAN-PR?",
-    answer: "Circuito pré-definido com baliza, rampa, sinalizações e direção em via pública. Examinador do DETRAN-PR avalia em tempo real. Faltas eliminatórias reprovam imediatamente."
+    answer: "O exame prático avalia condução segura, domínio do veículo, sinalização e circulação no trajeto definido pelo Detran-PR. A baliza na categoria B e a rampa na categoria A não são mais exigidas no Paraná."
   },
   {
     category: "Exames",
@@ -272,17 +272,17 @@ export const faqData: FAQItem[] = [
   {
     category: "Taxas",
     question: "Quanto custa o processo de primeira habilitação no DETRAN-PR?",
-    answer: "Há taxas de abertura de processo (RENACH), exames médico e psicotécnico (~R$ 404 no PR), prova teórica e prova prática. A APTOS te informa o valor total no orçamento."
+    answer: "O custo total depende da categoria, dos serviços contratados e das taxas vigentes. A legislação estadual de 2026 reduziu para R$ 180 o valor conjunto dos exames de aptidão física e mental e da avaliação psicológica no Paraná; outros exames e taxas são cobrados à parte."
   },
   {
     category: "Taxas",
     question: "Quanto custam os exames médico e psicotécnico em SJP?",
-    answer: "Atualmente em torno de R$ 404 somando os dois (valor previsto em lei estadual). A Resolução 1020/2025 prevê teto nacional de R$ 180, mas isso ainda aguarda regulamentação no Paraná."
+    answer: "A Lei estadual 23.259/2026 reduziu para R$ 180 o preço conjunto dos exames de aptidão física e mental e avaliação psicológica no Paraná. Confirme o valor e a cobrança vigente diretamente no Detran-PR."
   },
   {
     category: "Taxas",
     question: "Há custo extra para usar o app CNH do Brasil?",
-    answer: "O app é gratuito. Mas o curso teórico via autoescola dá direito a suporte personalizado, simulados específicos e acompanhamento do processo — vantagens que muitos alunos preferem."
+    answer: "O conteúdo teórico oferecido pelo aplicativo oficial CNH do Brasil é gratuito. Eventuais serviços adicionais da autoescola são opcionais e devem estar discriminados no orçamento."
   },
   {
     category: "Taxas",
@@ -321,7 +321,7 @@ export const faqData: FAQItem[] = [
   {
     category: "Documentação",
     question: "Sou menor de 18 anos. Posso me matricular antes?",
-    answer: "Sim. Você pode iniciar exames e curso teórico aos 17 anos e 6 meses, mas só recebe a PPD após completar 18 anos."
+    answer: "Para iniciar o processo de primeira habilitação é necessário ter 18 anos completos, CPF, documento de identificação e saber ler e escrever. Você pode consultar orientações antes dessa idade, sem iniciar o processo."
   },
   {
     category: "Documentação",
@@ -353,7 +353,7 @@ export const faqData: FAQItem[] = [
   {
     category: "Pagamento",
     question: "O que está incluso no valor?",
-    answer: "Depende do pacote: matrícula no DETRAN, curso teórico, simulados, número de aulas práticas contratadas e acompanhamento. Taxas DETRAN, médico e psicotécnico geralmente são pagos à parte (mas você sabe antes)."
+    answer: "Depende do plano contratado: aulas práticas, orientação e outros serviços devem constar do orçamento. Exames, taxas oficiais e custos de terceiros precisam estar identificados separadamente."
   },
 
   // ========================= DETRAN-PR =========================
@@ -370,12 +370,12 @@ export const faqData: FAQItem[] = [
   {
     category: "DETRAN-PR",
     question: "O que é a PPD e a CNH definitiva?",
-    answer: "PPD (Permissão Para Dirigir) é emitida após aprovação em todos os exames e vale 2 anos. Se nesse período você não cometer infração grave/gravíssima, recebe a CNH definitiva sem novos exames."
+    answer: "A Permissão para Dirigir (PPD) vale 1 ano. Ao final, a CNH definitiva depende do cumprimento das condições legais, incluindo não cometer infração grave, gravíssima nem reincidir em infração média durante o período."
   },
   {
     category: "DETRAN-PR",
     question: "Posso receber a CNH Digital?",
-    answer: "Sim. Pelo app Carteira Digital de Trânsito (CDT) você acessa sua CNH no celular. A Resolução 1020/2025 prevê que ela seja gratuita; o impresso continua disponível mediante taxa."
+    answer: "Sim. No Paraná, a CNH digital é disponibilizada automaticamente após o cumprimento dos requisitos e pode ser acessada no aplicativo oficial CNH do Brasil. A via física segue as regras e taxas de emissão aplicáveis."
   },
   {
     category: "DETRAN-PR",
@@ -424,7 +424,7 @@ export const faqData: FAQItem[] = [
   {
     category: "APTOS",
     question: "Qual a taxa de aprovação da APTOS?",
-    answer: "Cerca de 95% dos nossos alunos são aprovados no DETRAN-PR — acima da média do estado. Isso por causa da nossa metodologia de simulado em circuito real."
+    answer: "O desempenho de cada aluno depende de sua preparação e dos exames oficiais. Peça à equipe dados atualizados e verificáveis sobre resultados, sem considerar percentuais promocionais como garantia de aprovação."
   },
 ];
 

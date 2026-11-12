@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     q: "Quanto custa tirar a CNH em São José dos Pinhais?",
-    a: "O valor varia conforme a categoria (A, B ou AB), forma de pagamento e taxas do DETRAN-PR. Solicite seu orçamento personalizado pelo nosso simulador — você recebe o valor exato pelo WhatsApp em minutos, sem compromisso.",
+    a: "O valor varia conforme a categoria (A, B ou AB), forma de pagamento e taxas do DETRAN-PR. Solicite seu orçamento personalizado pela triagem de atendimento — a equipe informa o orçamento atualizado e as etapas, sem compromisso.",
   },
   {
     q: "A Autoescola APTOS fica perto do DETRAN de São José dos Pinhais?",
@@ -216,7 +216,7 @@ const AutoescolaSaoJoseDosPinhais = () => {
               { icon: MapPin, t: "Localização estratégica", d: "Próximo ao DETRAN-PR de São José dos Pinhais — menos tempo perdido em deslocamento." },
               { icon: Car, t: "Frota nova e segura", d: "Carros novos com direção elétrica, manutenção em dia e instrutores certificados." },
               { icon: Clock, t: "Atendimento rápido", d: "Resposta em até 10 minutos pelo WhatsApp e processo de matrícula simplificado." },
-              { icon: CheckCircle, t: "95% de aprovação", d: "Metodologia comprovada, simulados e acompanhamento até o dia da prova." },
+              { icon: CheckCircle, t: "Preparação orientada", d: "Aulas com instrutores e acompanhamento durante o processo de habilitação." },
               { icon: Award, t: "+15 anos de mercado", d: "Tradição em São José dos Pinhais com milhares de alunos aprovados." },
               { icon: ShieldCheck, t: "100% credenciada DETRAN-PR", d: "Centro de Formação de Condutores oficial, com toda a segurança jurídica." },
             ].map((b) => (
