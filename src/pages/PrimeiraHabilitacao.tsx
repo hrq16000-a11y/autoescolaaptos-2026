@@ -353,7 +353,7 @@ const PrimeiraHabilitacao = () => {
                     </div>
                     <ul className="text-sm text-muted-foreground space-y-1">
                       <li>• Acompanhamento completo</li>
-                      <li>• Maior taxa de aprovação</li>
+                      <li>• Orientação para as etapas e exames</li>
                       <li>• Suporte administrativo</li>
                       <li>• Instrutores certificados</li>
                     </ul>

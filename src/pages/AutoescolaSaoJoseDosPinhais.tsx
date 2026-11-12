@@ -9,11 +9,12 @@ import MobileStickyBar from "@/components/MobileStickyBar";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { whatsappLink } from "@/lib/whatsapp";
 import fachada from "@/assets/fachada-aptos.webp";
+import { PRAZO_PRIMEIRA_CNH } from "@/data/cnhGuidance";
 
 const faqs = [
   {
     q: "Qual a melhor autoescola em São José dos Pinhais?",
-    a: "A Autoescola APTOS é referência em São José dos Pinhais há mais de 15 anos, com 95% de aprovação no DETRAN-PR, frota nova, instrutores credenciados e atendimento humanizado. Estamos próximos ao DETRAN, com aulas práticas em carros novos e curso teórico 100% online pelo app CNH do Brasil.",
+    a: "A Autoescola APTOS é referência em São José dos Pinhais há mais de 15 anos, com equipe de atendimento, frota para aulas e instrutores credenciados e atendimento humanizado. Estamos próximos ao DETRAN, com aulas práticas em carros novos e curso teórico 100% online pelo app CNH do Brasil.",
   },
   {
     q: "Quanto custa tirar a CNH em São José dos Pinhais?",
@@ -29,7 +30,7 @@ const faqs = [
   },
   {
     q: "Quanto tempo demora para tirar a CNH em São José dos Pinhais?",
-    a: "Em média de 2 a 4 meses, dependendo da sua disponibilidade para aulas práticas e do agendamento dos exames no DETRAN-PR. Não há mais prazo máximo de 12 meses no Paraná.",
+    a: PRAZO_PRIMEIRA_CNH,
   },
   {
     q: "A APTOS atende quais bairros de São José dos Pinhais?",
@@ -80,7 +81,7 @@ const AutoescolaSaoJoseDosPinhais = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Autoescola em São José dos Pinhais | CNH com Aprovação | APTOS"
-        description="Autoescola APTOS em São José dos Pinhais: +15 anos, 95% de aprovação no DETRAN-PR, carros novos, curso online e próximo ao DETRAN. Solicite seu orçamento."
+        description="Autoescola APTOS em São José dos Pinhais: orientação para CNH, aulas práticas, opções de estudo teórico e atendimento local. Solicite seu orçamento."
         canonical="/autoescola-sao-jose-dos-pinhais"
         jsonLd={localJsonLd}
       />
@@ -106,11 +107,10 @@ const AutoescolaSaoJoseDosPinhais = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="text-4xl md:text-6xl font-heading font-black leading-tight mb-4"
               >
-                Autoescola em <span className="text-primary">São José dos Pinhais</span> com aprovação garantida
+                Autoescola em <span className="text-primary">São José dos Pinhais</span> com orientação para sua CNH
               </motion.h1>
               <p className="text-lg text-muted-foreground mb-6">
-                Há mais de 15 anos, a APTOS é a Centro de Formação de Condutores que mais aprova alunos
-                no DETRAN-PR em São José dos Pinhais. Carros novos, curso online e atendimento humano —
+                A APTOS oferece orientação para a habilitação em São José dos Pinhais. Conheça as opções de aulas, curso teórico e atendimento humano —
                 tudo perto do DETRAN.
               </p>
 
@@ -161,7 +161,7 @@ const AutoescolaSaoJoseDosPinhais = () => {
           {[
             { icon: Award, value: "+15 anos", label: "de mercado" },
             { icon: Users, value: "+5.000", label: "alunos formados" },
-            { icon: CheckCircle, value: "95%", label: "de aprovação" },
+            { icon: CheckCircle, value: "CNH", label: "orientação" },
             { icon: ShieldCheck, value: "DETRAN-PR", label: "credenciada" },
           ].map((s) => (
             <div key={s.label} className="bg-card border border-border rounded-xl p-5 text-center">
@@ -180,7 +180,7 @@ const AutoescolaSaoJoseDosPinhais = () => {
             CNH em São José dos Pinhais — todas as categorias
           </h2>
           <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Escolha o serviço ideal para o seu momento. Todos com orçamento sob medida em minutos.
+            Escolha o serviço ideal para o seu momento. Solicite orientação e orçamento à equipe.
           </p>
           <div className="grid md:grid-cols-3 gap-5">
             {[
@@ -215,7 +215,7 @@ const AutoescolaSaoJoseDosPinhais = () => {
             {[
               { icon: MapPin, t: "Localização estratégica", d: "Próximo ao DETRAN-PR de São José dos Pinhais — menos tempo perdido em deslocamento." },
               { icon: Car, t: "Frota nova e segura", d: "Carros novos com direção elétrica, manutenção em dia e instrutores certificados." },
-              { icon: Clock, t: "Atendimento rápido", d: "Resposta em até 10 minutos pelo WhatsApp e processo de matrícula simplificado." },
+              { icon: Clock, t: "Atendimento rápido", d: "Solicite atendimento pelo fluxo do site; a equipe responde conforme disponibilidade." },
               { icon: CheckCircle, t: "Preparação orientada", d: "Aulas com instrutores e acompanhamento durante o processo de habilitação." },
               { icon: Award, t: "+15 anos de mercado", d: "Tradição em São José dos Pinhais com milhares de alunos aprovados." },
               { icon: ShieldCheck, t: "100% credenciada DETRAN-PR", d: "Centro de Formação de Condutores oficial, com toda a segurança jurídica." },

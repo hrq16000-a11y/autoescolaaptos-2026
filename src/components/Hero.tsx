@@ -99,7 +99,7 @@ const Hero = () => {
 
   const stats = [
     { icon: Award, value: "+15", label: "Anos de Experiência" },
-    { icon: Users, value: "95%", label: "Taxa de Aprovação" },
+    { icon: Users, value: "Equipe", label: "Atendimento humano" },
     { icon: CheckCircle, value: "+5000", label: "Alunos Formados" },
   ];
 

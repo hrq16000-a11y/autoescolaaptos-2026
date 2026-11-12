@@ -23,20 +23,20 @@ const colunas: Coluna[] = [
     key: "moto",
     titulo: "Categoria A",
     badge: "Moto",
-    tempo: "2 a 3 meses",
+    tempo: "Sem prazo fixo",
     idade: "18 anos",
     beneficios: [
       { label: "Permite pilotar motos", ok: true },
       { label: "Permite dirigir carro", ok: false },
       { label: "Aulas práticas em moto escola", ok: true },
-      { label: "Mais econômica", ok: true },
+      { label: "Opções de formação em motocicleta", ok: true },
     ],
   },
   {
     key: "carro",
     titulo: "Categoria B",
     badge: "Carro",
-    tempo: "2 a 4 meses",
+    tempo: "Sem prazo fixo",
     idade: "18 anos",
     beneficios: [
       { label: "Permite dirigir carro até 3.500kg", ok: true },
@@ -50,11 +50,11 @@ const colunas: Coluna[] = [
     titulo: "Categoria AB",
     badge: "Combinada",
     destaque: true,
-    tempo: "3 a 5 meses",
+    tempo: "Sem prazo fixo",
     idade: "18 anos",
     beneficios: [
       { label: "Carro + moto na mesma CNH", ok: true },
-      { label: "Economia frente a tirar separado", ok: true },
+      { label: "Orçamento A+B sob consulta", ok: true },
       { label: "Processo único no Detran", ok: true },
       { label: "Indicada para quem quer liberdade total", ok: true },
     ],
@@ -63,12 +63,12 @@ const colunas: Coluna[] = [
     key: "inclusao",
     titulo: "Inclusão",
     badge: "Adicionar categoria",
-    tempo: "30 a 60 dias",
+    tempo: "Prazo variável",
     idade: "Já habilitado",
     beneficios: [
       { label: "Adiciona A ou B ao seu CNH atual", ok: true },
-      { label: "Sem refazer exames médicos*", ok: true },
-      { label: "Apenas aulas práticas e prova", ok: true },
+      { label: "Avaliações conforme regras do Detran-PR", ok: true },
+      { label: "Aulas e exames conforme o processo", ok: true },
       { label: "Para quem já tem CNH", ok: true },
     ],
   },
@@ -87,7 +87,7 @@ const Comparador = () => {
             buildComparisonSchema(
               colunas.map((c) => ({
                 name: `${c.titulo} (${c.badge})`,
-                description: `Tempo médio: ${c.tempo}. Requisito: ${c.idade}. ${c.beneficios
+                description: `Prazo: ${c.tempo}. Requisito: ${c.idade}. ${c.beneficios
                   .filter((b) => b.ok)
                   .map((b) => b.label)
                   .join("; ")}.`,
@@ -125,7 +125,7 @@ const Comparador = () => {
               >
                 {col.destaque && (
                   <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full">
-                    Mais escolhida
+                    Opção combinada
                   </span>
                 )}
                 <p className="text-sm font-semibold text-primary uppercase">{col.badge}</p>
@@ -133,7 +133,7 @@ const Comparador = () => {
 
                 <div className="grid grid-cols-2 gap-2 text-sm mb-4">
                   <div className="bg-muted rounded-lg p-2">
-                    <p className="text-muted-foreground text-xs">Tempo</p>
+                    <p className="text-muted-foreground text-xs">Prazo</p>
                     <p className="font-semibold">{col.tempo}</p>
                   </div>
                   <div className="bg-muted rounded-lg p-2">
