@@ -35,4 +35,20 @@ jobs:
       # Simula o build que o editor Lovable usa para a prévia; não publica.
       - run: npm run build:dev
         if: matrix.command == 'build'
+      - name: Smoke Vite development server (local preview)
+        if: matrix.command == 'build'
+        run: |
+          set -euo pipefail
+          npm run dev -- --host 127.0.0.1 > /tmp/aptos-vite-dev.log 2>&1 &
+          vite_pid=$!
+          trap 'kill "$vite_pid" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 20); do
+            if curl -fsS --max-time 2 -o /tmp/aptos-preview.html http://127.0.0.1:8080/; then
+              grep -Eq '<div id="root"' /tmp/aptos-preview.html
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/aptos-vite-dev.log
+          exit 1
 
