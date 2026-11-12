@@ -101,7 +101,7 @@ const Index = () => {
     {
       title: "Curso de Reciclagem",
       href: "/reciclagem-cnh",
-      description: "100% online (EAD), aprovado pelo DETRAN-PR.",
+      description: "Consulte as modalidades autorizadas e a disponibilidade do curso de reciclagem.",
     },
     {
       title: "Reteste Prático",
@@ -111,7 +111,7 @@ const Index = () => {
     {
       title: "Perguntas Frequentes",
       href: "/perguntas-frequentes",
-      description: "+80 dúvidas respondidas sobre CNH no Paraná.",
+      description: "Dúvidas frequentes sobre CNH e serviços no Paraná.",
     },
   ];
 

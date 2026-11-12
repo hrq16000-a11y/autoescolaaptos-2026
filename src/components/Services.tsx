@@ -57,7 +57,7 @@ const Services = () => {
       features: [
         "Modalidade conforme autorização do Detran-PR",
         "45 horas-aula no Paraná",
-        "Certificado enviado ao DETRAN",
+        "Conclusão conforme as exigências do DETRAN-PR",
         "Suporte por WhatsApp",
       ],
     },
