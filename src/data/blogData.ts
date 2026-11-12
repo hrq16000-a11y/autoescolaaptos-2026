@@ -109,7 +109,7 @@ A prova teórica continua obrigatória para obter a primeira habilitação. O De
 
 A Autoescola APTOS, em São José dos Pinhais, pode esclarecer dúvidas sobre as opções de preparação e os serviços que estiverem disponíveis. Confira as condições diretamente com a equipe.
 
-**O antigo simulador próprio da APTOS foi descontinuado.** Este guia não oferece questões interativas nem simulados exclusivos. Nenhuma dica garante aprovação.
+**O antigo simulador próprio da APTOS foi descontinuado.** Este guia não disponibiliza provas interativas nem banco próprio de questões. Nenhuma dica garante aprovação.
 
 Fonte: [Detran-PR — mudanças no processo de habilitação](https://www.detran.pr.gov.br/Pagina/Informacoes-sobre-mudancas-no-processo-de-habilitacao-Resolucao-Contran-10202025).
 
