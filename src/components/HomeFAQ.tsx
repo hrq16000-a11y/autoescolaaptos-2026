@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/accordion";
 import { HelpCircle } from "lucide-react";
 import CTAButton from "@/components/CTAButton";
+import { PRAZO_PRIMEIRA_CNH } from "@/data/cnhGuidance";
 
 /**
  * Home FAQ — accordion + FAQPage JSON-LD (rich snippets no Google).
@@ -15,7 +16,7 @@ import CTAButton from "@/components/CTAButton";
 const HOME_FAQS = [
   {
     q: "Quanto tempo demora para tirar a 1ª Habilitação?",
-    a: "Com a Resolução CONTRAN 1020/2025, o processo completo leva em média de 2 a 4 meses. O prazo depende da agenda do DETRAN-PR para os exames e do seu ritmo no curso teórico — que agora é livre, feito pelo aplicativo CNH do Brasil, sem carga horária mínima obrigatória.",
+    a: PRAZO_PRIMEIRA_CNH,
   },
   {
     q: "Posso parcelar o valor da CNH na APTOS?",
@@ -27,7 +28,7 @@ const HOME_FAQS = [
   },
   {
     q: "Quantas aulas práticas são obrigatórias hoje?",
-    a: "Pela Resolução 1020/2025, o mínimo é de apenas 2 horas de aulas práticas. Na prática, recomendamos entre 10 e 20 aulas para chegar totalmente preparado ao exame do DETRAN — o número exato depende da sua evolução.",
+    a: "Para a primeira habilitação, o Detran-PR informa mínimo de 2 horas-aula práticas por categoria pretendida. O candidato pode precisar de treinamento adicional conforme sua preparação; o mínimo legal não garante aprovação.",
   },
   {
     q: "Onde fica a APTOS e quais bairros vocês atendem?",
@@ -35,7 +36,7 @@ const HOME_FAQS = [
   },
   {
     q: "Vocês fazem renovação, reciclagem e mudança de categoria?",
-    a: "Sim. Oferecemos primeira habilitação, renovação de CNH, curso de reciclagem 100% online (para condutores suspensos), mudança e inclusão de categoria (A e B) e reteste prático para quem foi reprovado no exame.",
+    a: "A APTOS orienta sobre primeira habilitação, renovação, reciclagem, inclusão de categoria e reteste. A modalidade do curso de reciclagem, presencial ou EaD, e sua disponibilidade devem ser confirmadas no atendimento.",
   },
   {
     q: "O curso teórico é online?",
@@ -43,7 +44,7 @@ const HOME_FAQS = [
   },
   {
     q: "Como faço para começar agora?",
-    a: "Clique no botão de WhatsApp, responda 3 perguntas rápidas (categoria, prazo e experiência) e receba um orçamento personalizado. Um dos nossos consultores retorna em minutos com os próximos passos.",
+    a: "Use a triagem do site para informar o serviço desejado e seus dados. A equipe confirma os próximos passos e as condições pelo atendimento, conforme disponibilidade.",
   },
 ];
 

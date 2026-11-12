@@ -31,6 +31,7 @@ jobs:
       - run: node --test tests/ofertas-atribuicao.test.mjs
       - run: node --test tests/cnh-atualizacao-2026.test.mjs
       - run: node --test tests/cnh-blog-legado-2026.test.mjs
+      - run: node --test tests/faq-consistencia-2026.test.mjs
       - run: node --experimental-strip-types --test tests/marketing-vercel-export.test.mjs
       - run: node --test tests/inclusao-moto.test.mjs
       - run: npm run ${{ matrix.command }}

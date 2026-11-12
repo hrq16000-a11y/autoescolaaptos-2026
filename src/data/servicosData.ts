@@ -5,6 +5,7 @@ import {
   Car,
   type LucideIcon,
 } from "lucide-react";
+import { PRAZO_ADICAO_CATEGORIA } from "./cnhGuidance";
 
 export interface ServicoData {
   slug: string;
@@ -35,9 +36,9 @@ export const SERVICOS: Record<string, ServicoData> = {
     h1: "Inclusão de Categoria na CNH em São José dos Pinhais",
     metaTitle: "Inclusão de Categoria CNH (A ou B) em São José dos Pinhais | APTOS",
     metaDescription:
-      "Inclua a categoria A (moto) ou B (carro) na sua CNH com a Autoescola APTOS em São José dos Pinhais. Processo rápido, instrutores credenciados e alta aprovação.",
+      "Inclua a categoria A (moto) ou B (carro) na sua CNH com a Autoescola APTOS em São José dos Pinhais. Orientação para adicionar categoria e aulas com instrutores credenciados.",
     heroSubtitle:
-      "Já tem CNH e quer adicionar uma nova categoria? Faça a inclusão (A ou B) com quem mais aprova em São José dos Pinhais. Curso teórico 100% online e aulas práticas com veículos novos.",
+      "Já tem CNH e quer adicionar uma nova categoria? Consulte a inclusão de A ou B, requisitos atualizados e opções de aulas práticas com a equipe da APTOS.",
     porQue:
       "A inclusão é o caminho mais rápido para quem já é habilitado e quer pilotar moto (A) ou dirigir carro (B). Você reaproveita seu histórico no DETRAN-PR e só faz o complemento necessário.",
     beneficios: [
@@ -88,15 +89,15 @@ export const SERVICOS: Record<string, ServicoData> = {
       "+15 anos de tradição em São José dos Pinhais",
       "Frota nova: opções de carro manual e automático, além de motos",
       "Instrutores credenciados pelo DETRAN-PR",
-      "95% de aprovação no DETRAN-PR",
+      "Acompanhamento das etapas do processo",
     ],
     publicoAlvo:
       "Condutores já habilitados na A que querem incluir a B (carro), ou habilitados na B que querem incluir a A (moto) — passando a ter CNH AB.",
-    duracao: "Em média 30 a 60 dias, dependendo da categoria e disponibilidade do aluno.",
+    duracao: PRAZO_ADICAO_CATEGORIA,
     preRequisitos: [
       "Estar habilitado em outra categoria há pelo menos 1 ano (regra geral)",
       "Idade mínima: 18 anos completos",
-      "Não ter cometido infração gravíssima nos últimos 12 meses",
+      "Cumprir os requisitos vigentes de habilitação e aptidão para a categoria pretendida",
     ],
     serviceType: "Inclusão de Categoria de CNH",
     ctaPrincipal: "Quero incluir uma categoria",
@@ -104,7 +105,7 @@ export const SERVICOS: Record<string, ServicoData> = {
     faqs: [
       {
         q: "Quanto tempo leva para incluir uma categoria?",
-        a: "Em média 30 a 60 dias, dependendo da categoria e da disponibilidade do aluno. A categoria A (moto) costuma ser a mais rápida.",
+        a: PRAZO_ADICAO_CATEGORIA,
       },
       {
         q: "Preciso refazer o curso teórico inteiro?",
@@ -112,7 +113,7 @@ export const SERVICOS: Record<string, ServicoData> = {
       },
       {
         q: "Quantas aulas práticas preciso fazer?",
-        a: "Com a Resolução CONTRAN 1020/2025, o mínimo é de 2 horas. Mas a APTOS recomenda treinar até estar confortável — a maioria dos alunos faz de 5 a 15 aulas.",
+        a: "Para a adição de categoria, o treinamento e os exames seguem os requisitos do Detran-PR para o processo específico. Consulte as aulas exigidas e avalie sua preparação antes de agendar a prova."
       },
       {
         q: "Posso incluir a categoria A já tendo a B?",
@@ -332,7 +333,7 @@ export const SERVICOS: Record<string, ServicoData> = {
     metaDescription:
       "Aulas práticas de direção com instrutores credenciados, carros novos com direção elétrica e treino no circuito real do DETRAN-PR em São José dos Pinhais.",
     heroSubtitle:
-      "Você dirige com quem mais aprova em São José dos Pinhais. Carros novos com direção elétrica, instrutores pacientes e treino no circuito do DETRAN-PR. Aulas avulsas ou pacotes para se preparar com confiança.",
+      "Aprenda a dirigir com foco em segurança e orientação profissional em São José dos Pinhais. Carros novos com direção elétrica, instrutores pacientes e treino no circuito do DETRAN-PR. Aulas avulsas ou pacotes para se preparar com confiança.",
     porQue:
       "A Resolução CONTRAN 1020/2025 reduziu o mínimo de aulas práticas para 2 horas — mas isso quase nunca é suficiente. Na APTOS você faz o número de aulas que precisa para realmente dirigir com segurança, não só passar na prova.",
     beneficios: [

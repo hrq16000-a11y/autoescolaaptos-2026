@@ -1,0 +1,5 @@
+/** Respostas institucionais compartilhadas: nenhum prazo comercial garantido. 
+ * Referência: Detran-PR, Resolução Contran 1.020/2025. */
+export const PRAZO_PRIMEIRA_CNH = "Não existe prazo fixo para concluir a primeira habilitação. O tempo depende do andamento do candidato, da disponibilidade para aulas e do agendamento e aprovação nos exames do Detran-PR. A Resolução Contran 1.020/2025 eliminou o antigo limite geral de 12 meses para finalizar o processo. Consulte cada etapa no aplicativo CNH do Brasil e peça orientação individual, sem promessa de conclusão em determinado número de semanas ou meses.";
+export const PRAZO_ETAPAS_CNH = "A formação teórica pode ser feita no seu ritmo, sem carga horária mínima obrigatória. A formação prática exige pelo menos 2 horas-aula por categoria na primeira habilitação. Os exames dependem da agenda do Detran-PR e da aprovação em cada etapa; não existe um calendário fixo de conclusão.";
+export const PRAZO_ADICAO_CATEGORIA = "O prazo para adicionar uma categoria varia conforme os exames necessários, as aulas, a disponibilidade para agendamento e a aprovação no Detran-PR. Não há garantia de conclusão em 30 ou 60 dias.";
