@@ -1,6 +1,6 @@
 // Resumo + sugestão de resposta de lead via Lovable AI Gateway (Responses API, streaming).
-import { createOpenAI } from "npm:@ai-sdk/openai";
-import { streamText } from "npm:ai";
+import { createOpenAI } from "npm:@ai-sdk/openai@2";
+import { streamText } from "npm:ai@5";
 import type { SupabaseClient } from "https://esm.sh/@supabase/supabase-js@2.45.4";
 
 const RUN_ID = "X-Lovable-AIG-Run-ID";
