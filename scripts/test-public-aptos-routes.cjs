@@ -1,6 +1,6 @@
 // Public QA: navigation and layout only. NEVER submit forms or create leads.
 const { chromium } = require("playwright");
-const BASE = "https://autoescolaaptos.com.br";
+const BASE = (process.env.APTOS_QA_BASE_URL || "https://autoescolaaptos.com.br").replace(/\/$/, "");
 const routes = ["/perguntas-frequentes", "/1contato", "/inclusao-moto"];
 
 async function verify(page, route, width) {
