@@ -6,6 +6,7 @@ export interface BlogPost {
   image: string;
   readTime: string;
   publishedAt: string;
+  updatedAt?: string;
   content: string;
   keywords: string[];
 }
@@ -68,62 +69,51 @@ A direção defensiva salva vidas. Invista em conhecimento e pratique sempre ess
   },
   {
     slug: "como-passar-prova-teorica-detran",
-    title: "Como Passar na Prova Teórica do DETRAN: 15 Dicas Infalíveis",
-    description: "Descubra as melhores estratégias para ser aprovado na prova teórica do DETRAN de primeira. Dicas de estudo, simulados e o que mais cai na prova.",
+    title: "Prova Teórica do DETRAN-PR: 15 Dicas de Estudo Atualizadas",
+    description: "Entenda a prova teórica do Paraná em 2026: 30 questões, pelo menos 20 acertos, 60 minutos e dicas de estudo com fontes oficiais.",
     category: "prova-detran",
     image: "/placeholder.svg",
     readTime: "10 min",
     publishedAt: "2024-11-28",
-    keywords: ["prova teórica detran", "como passar no detran", "simulado detran", "autoescola são josé dos pinhais"],
+    updatedAt: "2026-11-12",
+    keywords: ["prova teórica detran pr", "20 acertos em 30 questões", "estudo CNH", "autoescola são josé dos pinhais"],
     content: `
-## A Prova Teórica do DETRAN
+## Como funciona a prova teórica no Paraná?
 
-A prova teórica é o primeiro grande desafio para quem está tirando a CNH. Com 30 questões e necessidade de acertar pelo menos 21 (70%), muitos candidatos ficam nervosos. Mas com a preparação certa, a aprovação é garantida!
+A prova teórica continua obrigatória para obter a primeira habilitação. O Detran-PR informa que são **30 questões**, com **60 minutos** de duração regular e aprovação a partir de **20 acertos**. Confirme os requisitos do seu agendamento no órgão oficial.
 
-## 15 Dicas para Passar na Prova Teórica
+## 15 dicas para estudar
 
 ### Preparação
+1. Consulte o **Código de Trânsito Brasileiro (CTB)** e os materiais oficiais de habilitação.
+2. Revise exemplos de situações reais de trânsito e a interpretação das regras.
+3. Distribua o estudo ao longo dos dias.
+4. Anote os assuntos em que tem dúvidas e revise com atenção.
+5. Consulte os canais do Detran-PR e da Senatran para orientações atualizadas.
 
-1. **Estude o material oficial**: O CTB (Código de Trânsito Brasileiro) é a base de todas as questões
-2. **Faça simulados online**: Pratique com questões similares às da prova real
-3. **Estude um pouco todos os dias**: 30 minutos diários são mais eficientes que 5 horas em um dia
-4. **Anote os erros**: Revise as questões que você errou nos simulados
-5. **Use aplicativos de estudo**: Existem diversos apps gratuitos com questões do DETRAN
+### Temas importantes
+6. **Sinalização**: placas e marcas viárias.
+7. **Legislação**: normas de circulação, infrações e penalidades.
+8. **Direção defensiva**: prevenção de riscos e comportamentos seguros.
+9. **Primeiros socorros**: condutas responsáveis em sinistros.
+10. **Meio ambiente**: impactos da circulação de veículos.
 
-### Conteúdo que Mais Cai
+### Na prova
+11. Planeje o deslocamento e durma bem.
+12. Confira local, horário e documentos no agendamento.
+13. Leia o enunciado inteiro antes de responder.
+14. Preste atenção a palavras que mudam o sentido da pergunta.
+15. Administre os 60 minutos e revise suas respostas se houver tempo.
 
-6. **Sinalização**: Placas de regulamentação, advertência e indicação
-7. **Legislação**: Infrações, penalidades e crimes de trânsito
-8. **Direção defensiva**: Os 5 elementos e técnicas de prevenção
-9. **Primeiros socorros**: Procedimentos básicos em acidentes
-10. **Meio ambiente**: Poluição veicular e direção econômica
+## Orientação com a Autoescola APTOS
 
-### No Dia da Prova
+A Autoescola APTOS, em São José dos Pinhais, pode esclarecer dúvidas sobre as opções de preparação e os serviços que estiverem disponíveis. Confira as condições diretamente com a equipe.
 
-11. **Durma bem na noite anterior**: Descanse pelo menos 8 horas
-12. **Chegue com antecedência**: 30 minutos antes é o ideal
-13. **Leia cada questão com calma**: Não tenha pressa
-14. **Atenção às pegadinhas**: Palavras como "sempre", "nunca", "somente" podem mudar o sentido
-15. **Confie no seu preparo**: Você estudou, está pronto!
+**O antigo simulador próprio da APTOS foi descontinuado.** Este guia não oferece questões interativas nem simulados exclusivos. Nenhuma dica garante aprovação.
 
-## Principais Erros dos Candidatos
+Fonte: [Detran-PR — mudanças no processo de habilitação](https://www.detran.pr.gov.br/Pagina/Informacoes-sobre-mudancas-no-processo-de-habilitacao-Resolucao-Contran-10202025).
 
-- Não estudar sinalização de trânsito adequadamente
-- Ignorar questões sobre meio ambiente
-- Não fazer simulados suficientes
-- Estudar apenas na véspera da prova
-
-## Como a Autoescola APTOS Pode Ajudar
-
-Na **Autoescola APTOS** em São José dos Pinhais, oferecemos:
-- Aulas teóricas completas com instrutores experientes
-- Acesso a simulados exclusivos
-- Material de estudo atualizado
-- Acompanhamento individual do progresso
-
-## Conclusão
-
-A aprovação na prova teórica depende de dedicação e método de estudo. Seguindo essas dicas e contando com uma boa autoescola, você estará pronto para conquistar sua CNH!
+*Revisão editorial de novembro de 2026.*
     `
   },
   {
@@ -187,7 +177,7 @@ Orientam sobre direções, serviços e pontos de interesse.
 1. **Agrupe por categoria**: Estude todas as placas de regulamentação juntas
 2. **Use flashcards**: Faça cartões com a placa de um lado e o significado do outro
 3. **Observe no trânsito**: Durante o dia, identifique as placas que você vê
-4. **Faça simulados específicos**: Foque em questões sobre sinalização
+4. **Revise placas por assunto**: Consulte materiais oficiais de sinalização e exercite a interpretação das regras
 
 ## Na Autoescola APTOS
 
@@ -196,82 +186,50 @@ Oferecemos material didático completo sobre sinalização e aulas práticas ond
   },
   {
     slug: "como-passar-prova-pratica-detran",
-    title: "Prova Prática do DETRAN: O que Avaliam e Como Ser Aprovado",
-    description: "Saiba exatamente o que os examinadores avaliam na prova prática do DETRAN e aprenda técnicas para evitar os erros mais comuns.",
+    title: "Prova Prática do DETRAN-PR: o que mudou em 2026",
+    description: "Veja as mudanças no exame prático do Paraná em 2026, incluindo a retirada da baliza e da rampa, e orientações seguras de preparação.",
     category: "prova-detran",
     image: "/placeholder.svg",
     readTime: "9 min",
     publishedAt: "2024-11-20",
-    keywords: ["prova prática detran", "baliza", "exame de direção", "autoescola são josé dos pinhais"],
+    updatedAt: "2026-11-12",
+    keywords: ["prova prática detran pr", "fim da baliza", "exame de direção 2026", "autoescola são josé dos pinhais"],
     content: `
-## A Prova Prática do DETRAN
+## Exame prático no Paraná: mudanças em 2026
 
-A prova prática é o último passo para conquistar sua CNH. É natural sentir nervosismo, mas com preparo adequado e conhecimento do que será avaliado, você pode ir confiante.
+O Detran-PR informou a **retirada da baliza como exigência no exame prático de categoria B**. Para a **categoria A (moto)**, foi retirada a **rampa** do circuito de avaliação. Estacionar e controlar o veículo continuam sendo habilidades úteis no dia a dia, mas não devem ser anunciados como aquelas etapas obrigatórias que foram eliminadas.
 
-## O que é Avaliado na Prova Prática?
+## O que observar durante o exame?
 
-### 1. Verificações Iniciais
-- Ajuste do banco e retrovisores
-- Verificação do cinto de segurança
-- Conhecimento dos comandos do veículo
+### Antes de começar
+- Ajustar banco, espelhos e itens de segurança.
+- Conhecer os comandos do veículo e seguir as orientações recebidas.
 
-### 2. Manobras no Pátio
-- **Baliza (estacionamento)**: Você tem 3 tentativas
-- **Rampa**: Arranque em subida sem deixar o carro descer
+### Na circulação
+- Respeitar sinalização, preferenciais e limites de velocidade.
+- Sinalizar conversões e mudanças de faixa.
+- Demonstrar controle, observação do entorno e frenagem segura.
+- Estar atento a pedestres e outros usuários da via.
 
-### 3. Percurso em Via Pública
-- Conversões à esquerda e direita
-- Mudanças de faixa
-- Respeito à sinalização
-- Velocidade adequada
-- Uso correto das setas
+## Como funciona a avaliação?
 
-## Erros Eliminatórios
+Falhas de segurança e infrações podem comprometer o resultado. Os critérios de pontuação, interrupção e reprovação devem ser conferidos nas orientações atuais do Detran-PR. **Não há uma regra vigente de três tentativas de baliza neste exame**, pois a etapa deixou de ser exigida.
 
-Alguns erros causam reprovação imediata:
-- Desobedecer sinalização de parada
-- Avançar sinal vermelho
-- Não usar cinto de segurança
-- Exceder velocidade permitida
-- Subir na calçada
-- Cometer infração de trânsito
+## Dicas de preparação
 
-## Erros que Perdem Pontos
+1. Treine circulação urbana em condições seguras e com acompanhamento adequado.
+2. Pratique o uso de setas, espelhos, frenagem e controle do veículo.
+3. Confira local, horário e documentos da prova agendada.
+4. Procure descansar e evite manobras apressadas.
+5. Continue aprendendo a estacionar para a direção cotidiana, sem confundir com o exame atual.
 
-Cada erro tem uma pontuação negativa. Você reprova se acumular mais que determinado número de pontos:
-- Não sinalizar com seta
-- Controle irregular de embreagem
-- Usar marcha inadequada
-- Não verificar retrovisores
+## Na Autoescola APTOS
 
-## Dicas para a Prova Prática
+A APTOS, em São José dos Pinhais, pode informar quais modalidades de aulas e preparação estão disponíveis. Confirme horários e condições com a equipe. **A aprovação depende do desempenho do candidato e da avaliação oficial.**
 
-### Antes da Prova
-1. **Pratique bastante**: Quanto mais horas de prática, melhor
-2. **Conheça o percurso**: Familiarize-se com as ruas onde a prova é realizada
-3. **Durma bem**: Chegue descansado e alimentado
+Fontes: [Detran-PR — mudanças recentes](https://www.detran.pr.gov.br/Noticia/Aulas-EaD-nova-biometria-e-CNH-digital-Detran-PR-torna-habilitacao-mais-acessivel-em-oito) e [retirada da rampa para motos](https://www.detran.pr.gov.br/Noticia/CNH-para-moto-exames-praticos-no-Parana-nao-terao-mais-rampa-como-obstaculo).
 
-### Durante a Prova
-4. **Mantenha a calma**: Respire fundo se sentir nervosismo
-5. **Seja metódico**: Faça cada passo conscientemente
-6. **Não tenha pressa**: É melhor fazer devagar e certo
-
-### Na Baliza
-7. **Use as referências**: Aprenda os pontos de referência do veículo
-8. **Movimentos suaves**: Evite movimentos bruscos no volante
-9. **Atenção aos retrovisores**: Olhe sempre antes de movimentar
-
-## Como a Autoescola APTOS Prepara Você
-
-Na **Autoescola APTOS** em São José dos Pinhais:
-- Instrutores pacientes e experientes
-- Veículos novos e bem conservados
-- Aulas no mesmo percurso da prova
-- Simulação completa do exame
-
-## Conclusão
-
-A prova prática exige técnica e controle emocional. Com as aulas certas e prática suficiente, a aprovação é uma consequência natural. Confie no seu preparo!
+*Revisão editorial de novembro de 2026.*
     `
   },
   {
@@ -511,84 +469,49 @@ A melhor forma de não perder pontos é dirigir com responsabilidade. Na **Autoe
   {
     slug: "renovacao-cnh-como-funciona",
     title: "Renovação de CNH: Passo a Passo Completo e Atualizado",
-    description: "Saiba como renovar sua CNH: documentos necessários, exames, prazos e valores. Guia atualizado para São José dos Pinhais e região.",
+    description: "Renove a CNH no Paraná em 2026: exames, prazos, renovação simplificada, prorrogação excepcional e taxas oficiais.",
     category: "dicas",
     image: "/placeholder.svg",
     readTime: "6 min",
     publishedAt: "2024-10-30",
+    updatedAt: "2026-11-12",
     keywords: ["renovação CNH", "renovar habilitação", "detran PR", "autoescola são josé dos pinhais"],
     content: `
-## Quando Renovar a CNH?
+## Quando renovar a CNH?
 
-A CNH deve ser renovada antes da data de vencimento impressa no documento:
-- **Condutores até 49 anos**: Validade de 10 anos
-- **Condutores de 50 a 69 anos**: Validade de 5 anos
-- **Condutores com 70 anos ou mais**: Validade de 3 anos
+A validade depende da idade e da avaliação médica. Os prazos **máximos** são de até **10 anos** para condutores de 18 a 49 anos, **5 anos** para 50 a 69 e **3 anos** a partir de 70 anos. O médico pode estabelecer prazo menor.
 
-⚠️ **Importante**: Você pode iniciar o processo até 1 ano antes do vencimento.
+**Atenção à prorrogação excepcional de 2026:** o Detran-PR informou que determinadas CNHs com vencimento original entre **5 de junho e 8 de dezembro de 2026** tiveram a validade prorrogada para **9 de dezembro de 2026**, conforme condições e exceções oficiais. Consulte seu caso antes de dirigir com documento vencido.
 
-## Passo a Passo para Renovação
+## Passo a passo no Paraná
 
-### 1. Agende o Exame Médico
-- Acesse o site do DETRAN-PR
-- Agende em uma clínica credenciada
-- O exame avalia aptidão física e mental
+1. Solicite o serviço pelo Detran-PR, aplicativo Detran Inteligente, unidade de atendimento ou CFC.
+2. Confira os documentos, valores vigentes e eventuais requisitos biométricos.
+3. Agende e realize o exame de aptidão física e mental.
+4. Realize avaliação psicológica quando exigida, como no exercício de atividade remunerada (EAR). Outras etapas podem se aplicar às categorias profissionais.
+5. Acompanhe a emissão e a disponibilidade da CNH Digital ou impressa.
 
-### 2. Realize o Exame Médico
-- Leve documento de identidade
-- Informe problemas de saúde
-- Se usar óculos, leve-os
+## Renovação simplificada em 2026
 
-### 3. Exame Psicológico (se necessário)
-Obrigatório para:
-- Condutores de veículos de transporte (categorias C, D, E)
-- Condutores remunerados
-- Quando solicitado pelo médico
+Existem condições específicas para motoristas inscritos no **Registro Nacional Positivo de Condutores (RNPC)**, sem infrações sujeitas a pontuação nos últimos 12 meses. A modalidade possui regras conforme a faixa etária e **não dispensa de forma geral o exame de aptidão física e mental**.
 
-### 4. Pague as Taxas
-- Taxa de renovação
-- Taxa do exame médico
-- Taxa do exame psicológico (se aplicável)
+## Taxas, documentos e prazo de entrega
 
-### 5. Aguarde a Emissão
-Após aprovação nos exames, a nova CNH é emitida em até 5 dias úteis.
+Consulte a lista atual de documentos e as taxas diretamente no Detran-PR e na clínica credenciada. **Não use tabelas de preços de 2024 como referência atual.**
 
-## Documentos Necessários
+A CNH Digital costuma ficar disponível após a conclusão do procedimento e o registro do resultado. O prazo da versão impressa depende da emissão e da entrega pelos Correios; acompanhe pelo canal oficial.
 
-- RG ou CNH atual
-- CPF
-- Comprovante de residência
-- Foto 3x4 (geralmente tirada no local)
+## E se a CNH já venceu?
 
-## Valores Aproximados (2024)
+Em regra, dirigir com CNH vencida há **mais de 30 dias** é infração gravíssima, observadas eventuais prorrogações aplicáveis. Para documentos vencidos há mais de cinco anos, **não presuma que é obrigatório refazer os exames teórico e prático da primeira habilitação**. Consulte o procedimento de renovação atualizado do Detran-PR.
 
-| Item | Valor |
-|------|-------|
-| Exame médico | R$ 120 - R$ 180 |
-| Exame psicológico | R$ 150 - R$ 200 |
-| Taxa DETRAN | R$ 100 - R$ 150 |
+## Atendimento na Autoescola APTOS
 
-*Valores podem variar conforme a clínica e região*
+A APTOS, em São José dos Pinhais, pode informar sobre os serviços de orientação e atendimento disponíveis. A emissão da CNH depende do órgão de trânsito e das avaliações exigidas.
 
-## E se a CNH Já Venceu?
+Fontes: [Detran-PR — orientações de renovação em 2026](https://www.detran.pr.gov.br/Noticia/Apos-mudancas-de-2026-Detran-PR-reforca-orientacoes-sobre-renovacao-da-CNH) e [serviço oficial de renovação](https://www.detran.pr.gov.br/servicos/Motorista/Carteira-de-motorista/Solicitar-a-renovacao-da-carteira-de-motorista-MD3PAr6a).
 
-Se vencida há menos de 5 anos:
-- O processo é o mesmo da renovação normal
-
-Se vencida há mais de 5 anos:
-- É necessário refazer os exames teórico e prático
-
-## Renovação na Autoescola APTOS
-
-Na **Autoescola APTOS** em São José dos Pinhais, oferecemos:
-- Orientação completa sobre o processo
-- Encaminhamento para clínicas credenciadas
-- Acompanhamento até a emissão da nova CNH
-- Curso de reciclagem (se necessário)
-
-## Dica Extra
-
-Não deixe para a última hora! Comece o processo de renovação com pelo menos 1 mês de antecedência para evitar imprevistos.
+*Revisão editorial de novembro de 2026.*
     `
   }
 ];
