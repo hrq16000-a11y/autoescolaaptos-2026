@@ -15,6 +15,7 @@ export function getArticleJsonLd(post: NonNullable<ReturnType<typeof getPostBySl
     "headline": post.title,
     "description": post.description,
     "datePublished": post.publishedAt,
+    "dateModified": post.updatedAt ?? post.publishedAt,
     "author": {
       "@type": "Organization",
       "name": "Autoescola APTOS"
@@ -119,6 +120,7 @@ const BlogPost = () => {
                     <Calendar className="w-4 h-4" />
                     {formatDate(post.publishedAt)}
                   </span>
+                  {post.updatedAt && <span className="text-sm">Atualizado em {formatDate(post.updatedAt)}</span>}
                   <span className="flex items-center gap-2">
                     <Clock className="w-4 h-4" />
                     {post.readTime} de leitura
