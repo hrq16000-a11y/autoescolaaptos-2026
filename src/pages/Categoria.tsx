@@ -7,6 +7,7 @@ import SEO from "@/components/SEO";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { whatsappLink } from "@/lib/whatsapp";
+import { PRAZO_PRIMEIRA_CNH } from "@/data/cnhGuidance";
 
 type Slug = "a" | "b" | "ab";
 
@@ -31,7 +32,7 @@ export const CATEGORIAS: Record<Slug, CategoriaData> = {
     nome: "Categoria A — Moto",
     icon: Bike,
     hero: "CNH Categoria A em São José dos Pinhais",
-    subtitle: "Habilitação para motocicletas, motonetas e scooters, conforme a categoria A. Curso completo na APTOS, com aprovação acima da média do DETRAN-PR.",
+    subtitle: "Habilitação para motocicletas, motonetas e scooters, conforme a categoria A. Formação com orientação e foco na direção segura.",
     veiculos: "Motocicletas, motonetas e ciclomotores permitidos pela categoria A.",
     idadeMin: "18 anos completos",
     beneficios: [
@@ -50,7 +51,7 @@ export const CATEGORIAS: Record<Slug, CategoriaData> = {
     ],
     faqs: [
       { q: "Qual a idade mínima para tirar CNH Categoria A?", a: "18 anos completos, conforme o Código de Trânsito Brasileiro." },
-      { q: "Posso tirar A e B juntas?", a: "Sim! Optar pela Categoria AB sai mais barato do que tirar A e B separadas. Solicite o orçamento da AB no nossa triagem de atendimento." },
+      { q: "Posso tirar A e B juntas?", a: "Você pode solicitar A e B no mesmo processo, com etapas e provas práticas para cada categoria. Compare os custos no orçamento discriminado da APTOS." },
       { q: "Quanto custa a CNH A na APTOS?", a: "O valor depende de taxas do DETRAN-PR e da forma de pagamento. Responda 3 perguntas no nossa triagem de atendimento e receba orientação e orçamento confirmado no atendimento." },
     ],
   },
@@ -78,8 +79,8 @@ export const CATEGORIAS: Record<Slug, CategoriaData> = {
       "Exame prático e liberação da sua CNH B",
     ],
     faqs: [
-      { q: "Quanto tempo leva para tirar a CNH B?", a: "Em média 2 a 4 meses, dependendo da sua disponibilidade. No Paraná não existe mais prazo máximo de 12 meses." },
-      { q: "Quantas aulas práticas são obrigatórias?", a: "Com a Resolução CONTRAN 1020/2025, são exigidas no mínimo 2 horas de aula prática — mas a APTOS recomenda mais horas conforme o seu desempenho para garantir aprovação." },
+      { q: "Quanto tempo leva para tirar a CNH B?", a: PRAZO_PRIMEIRA_CNH },
+      { q: "Quantas aulas práticas são obrigatórias?", a: "Com a Resolução CONTRAN 1020/2025, são exigidas no mínimo 2 horas de aula prática — e a quantidade adicional deve ser avaliada conforme o preparo do candidato, sem garantia de aprovação." },
       { q: "Posso fazer a teórica de casa?", a: "Sim. O curso teórico é feito pelo aplicativo oficial CNH do Brasil, no seu celular, no seu ritmo." },
     ],
   },
@@ -89,7 +90,7 @@ export const CATEGORIAS: Record<Slug, CategoriaData> = {
     nome: "Categoria AB — Moto + Carro",
     icon: Car,
     hero: "CNH Categoria AB em São José dos Pinhais",
-    subtitle: "Tire de uma vez só sua habilitação para moto e carro — mais econômico, mais rápido e com a mesma qualidade APTOS.",
+    subtitle: "Formação para moto e carro em um mesmo processo, com orientação da APTOS em cada etapa.",
     veiculos: "Motos (Categoria A) + carros e utilitários até 3.500 kg (Categoria B), em um único processo.",
     idadeMin: "18 anos completos",
     beneficios: [
@@ -107,7 +108,7 @@ export const CATEGORIAS: Record<Slug, CategoriaData> = {
       "Exames práticos das duas categorias e liberação da CNH AB",
     ],
     faqs: [
-      { q: "Vale a pena tirar AB de uma vez?", a: "Sim. Você paga uma única matrícula, faz um único curso teórico e economiza centenas de reais em relação a tirar A e depois B." },
+      { q: "Vale a pena tirar AB de uma vez?", a: "A formação AB reúne as duas categorias no mesmo processo, com aulas e provas práticas para cada uma. A economia depende do orçamento; não há redução de preço garantida." },
       { q: "Os exames práticos são juntos?", a: "Não. Cada categoria tem seu exame prático específico no DETRAN-PR, mas o processo é todo coordenado pela APTOS." },
       { q: "Posso começar pela moto e depois o carro?", a: "Sim, definimos a melhor sequência junto com você na matrícula." },
     ],
@@ -248,7 +249,7 @@ const Categoria = ({ categorySlug }: { categorySlug?: Slug } = {}) => {
         <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl">
           {[
             { icon: Award, t: "+15 anos", s: "no mercado" },
-            { icon: CheckCircle, t: "95%", s: "aprovação" },
+            { icon: CheckCircle, t: "CNH", s: "orientação" },
             { icon: ShieldCheck, t: "DETRAN-PR", s: "credenciada" },
             { icon: Clock, t: "Rápido", s: "atendimento humano" },
           ].map((x) => (

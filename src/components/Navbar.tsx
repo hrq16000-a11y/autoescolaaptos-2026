@@ -36,7 +36,6 @@ const Navbar = () => {
     { href: "/autoescola-sao-jose-dos-pinhais", label: "São José dos Pinhais", isRoute: true },
     { href: "/primeira-habilitacao", label: "Primeira Habilitação", isRoute: true },
     { href: "/perguntas-frequentes", label: "FAQ", isRoute: true },
-    { href: "/blog", label: "Blog", isRoute: true },
     { href: "#contato", label: "Contato" },
   ];
 

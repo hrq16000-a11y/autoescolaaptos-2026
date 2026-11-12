@@ -1,3 +1,5 @@
+import { PRAZO_PRIMEIRA_CNH, PRAZO_ETAPAS_CNH, PRAZO_ADICAO_CATEGORIA } from "./cnhGuidance";
+
 export interface FAQItem {
   question: string;
   answer: string;
@@ -14,17 +16,17 @@ export const faqData: FAQItem[] = [
   {
     category: "Primeira Habilitação",
     question: "Quanto tempo demora para tirar a CNH com a nova resolução?",
-    answer: "Com a Resolução CONTRAN 1020/2025 o processo ficou mais ágil — em média de 2 a 4 meses. O tempo final depende da agenda do DETRAN-PR para exames e do ritmo do candidato no curso teórico (que agora é livre, sem carga horária mínima)."
+    answer: PRAZO_PRIMEIRA_CNH
   },
   {
     category: "Primeira Habilitação",
     question: "Quais documentos preciso para iniciar o processo?",
-    answer: "RG ou CNH (se já habilitado), CPF e comprovante de residência atualizado. A APTOS faz a abertura do processo para você no DETRAN-PR, sem você precisar ir até o órgão na primeira etapa."
+    answer: "Documento oficial de identificação e CPF são usados para iniciar o processo. Os documentos e a biometria seguem os requisitos do Detran-PR. O candidato pode iniciar e acompanhar etapas pelo aplicativo oficial CNH do Brasil; a APTOS presta orientação quando solicitada."
   },
   {
     category: "Primeira Habilitação",
     question: "Quantas aulas práticas são obrigatórias?",
-    answer: "Pela Resolução 1020/2025, o mínimo é apenas 2 horas. Na prática, a APTOS recomenda 10 a 20 aulas para chegar preparado ao exame — o número exato depende do seu desempenho."
+    answer: "Na primeira habilitação, o Detran-PR informa mínimo de 2 horas-aula práticas para cada categoria pretendida (A ou B). A formação adicional depende do preparo individual; cumprir o mínimo não garante aprovação."
   },
   {
     category: "Primeira Habilitação",
@@ -39,12 +41,12 @@ export const faqData: FAQItem[] = [
   {
     category: "Primeira Habilitação",
     question: "Ainda existe prazo máximo para concluir o processo?",
-    answer: "Não. O prazo de 12 meses foi extinto. Você conclui no seu ritmo — sem stress nem perda de etapas por demora."
+    answer: "O limite geral de 12 meses para concluir a primeira habilitação foi eliminado pela Resolução Contran 1.020/2025. Isso não dispensa etapas obrigatórias nem impede a expiração de documentos e exames específicos. Confira o andamento no Detran-PR."
   },
   {
     category: "Primeira Habilitação",
     question: "Posso começar mesmo trabalhando o dia todo?",
-    answer: "Sim. O curso teórico é 100% online (app CNH do Brasil) e as aulas práticas têm horários flexíveis incluindo manhã, tarde, noite e sábados."
+    answer: "O curso teórico pode ser feito gratuitamente no aplicativo oficial CNH do Brasil, no ritmo do candidato. Consulte a APTOS sobre os horários realmente disponíveis para aulas práticas."
   },
 
   // ========================= CATEGORIA A =========================
@@ -56,7 +58,7 @@ export const faqData: FAQItem[] = [
   {
     category: "Categoria A",
     question: "Quanto custa tirar a CNH A em São José dos Pinhais?",
-    answer: "O preço depende dos serviços contratados e das taxas oficiais. Solicite um orçamento discriminado pela triagem de atendimento, sem promessas de valor fixo para taxas públicas."
+    answer: "O valor depende do plano de aulas, dos exames e das taxas oficiais aplicáveis. Solicite orçamento discriminado pela triagem, para identificar o que está ou não incluído."
   },
   {
     category: "Categoria A",
@@ -83,7 +85,7 @@ export const faqData: FAQItem[] = [
   {
     category: "Categoria B",
     question: "Quanto tempo leva para tirar a CNH B?",
-    answer: "Em média 2 a 4 meses, dependendo da sua disponibilidade. Sem prazo máximo no Paraná desde a Resolução 1020/2025."
+    answer: PRAZO_PRIMEIRA_CNH
   },
   {
     category: "Categoria B",
@@ -98,14 +100,14 @@ export const faqData: FAQItem[] = [
   {
     category: "Categoria B",
     question: "Quantas aulas práticas a APTOS recomenda?",
-    answer: "Para alunos iniciantes recomendamos no mínimo 10 aulas, podendo chegar a 20 a 25 dependendo do progresso. A primeira aula é diagnóstica."
+    answer: "A quantidade adicional à carga mínima exigida depende do nível de preparo. A equipe pode orientar uma avaliação prática e o planejamento das aulas, sem garantir um número fixo ou aprovação."
   },
 
   // ========================= CATEGORIA AB =========================
   {
     category: "Categoria AB",
     question: "Vale a pena tirar AB de uma vez?",
-    answer: "Sim. Uma única matrícula, um único curso teórico e economia significativa em relação a tirar A e B separadamente. A maioria dos alunos que querem moto + carro escolhe AB."
+    answer: "A habilitação AB permite a formação nas categorias A e B no mesmo processo. As duas exigem preparação e exame prático próprios; compare o orçamento discriminado com a equipe antes de decidir se é mais vantajoso."
   },
   {
     category: "Categoria AB",
@@ -137,7 +139,7 @@ export const faqData: FAQItem[] = [
   {
     category: "Inclusão",
     question: "Quanto tempo demora uma inclusão?",
-    answer: "Em média 30 a 60 dias. Categoria A (moto) costuma ser a mais rápida; a categoria B (carro) leva um pouco mais por exigir mais aulas práticas."
+    answer: PRAZO_ADICAO_CATEGORIA
   },
   {
     category: "Inclusão",
@@ -228,7 +230,7 @@ export const faqData: FAQItem[] = [
   {
     category: "Aulas Práticas",
     question: "Quanto tempo dura cada aula?",
-    answer: "50 minutos cada aula, padrão DETRAN-PR. Você pode agendar uma ou várias aulas seguidas no mesmo dia."
+    answer: "A duração e o agendamento de cada sessão devem ser confirmados com a APTOS e com as normas do Detran-PR aplicáveis à modalidade. A carga mínima da primeira habilitação é expressa em horas-aula."
   },
   {
     category: "Aulas Práticas",
@@ -245,7 +247,7 @@ export const faqData: FAQItem[] = [
   {
     category: "Exames",
     question: "Como é o exame médico para CNH?",
-    answer: "Avaliação de visão, audição, equilíbrio, condições neurológicas e cardiológicas. Feito em clínica credenciada pelo DETRAN-PR. Validade: 10 anos (até 49 anos) ou 5 anos (50+)."
+    answer: "O exame de aptidão física e mental é realizado por profissional credenciado, conforme as regras do Detran-PR. A validade da CNH pode ser de até 10, 5 ou 3 anos, conforme idade e avaliação médica; isso não é uma validade única para todos os exames."
   },
   {
     category: "Exames",
@@ -265,7 +267,7 @@ export const faqData: FAQItem[] = [
   {
     category: "Exames",
     question: "Posso usar o carro da APTOS no exame?",
-    answer: "Sim. Alunos APTOS usam nossos veículos. Mesmo aluno externo (de outra escola) pode contratar o carro para o reteste."
+    answer: "A utilização de veículo no exame depende das regras atuais do Detran-PR e da disponibilidade e condições comerciais da APTOS. Consulte a equipe para confirmar a opção disponível para seu processo."
   },
 
   // ========================= TAXAS =========================
@@ -294,22 +296,22 @@ export const faqData: FAQItem[] = [
   {
     category: "Prazo",
     question: "Existe prazo máximo para terminar o processo?",
-    answer: "Não. A Resolução 1020/2025 acabou com o prazo de 12 meses. Você termina no seu ritmo."
+    answer: "A Resolução Contran 1.020/2025 eliminou o antigo limite geral de 12 meses para concluir a primeira habilitação. Os documentos e avaliações podem ter prazos próprios; consulte sua situação no Detran-PR."
   },
   {
     category: "Prazo",
     question: "Quanto tempo demora cada etapa?",
-    answer: "Matrícula e exames: 1 a 2 semanas. Curso teórico: 2 a 4 semanas (no seu ritmo). Aulas práticas: 4 a 8 semanas. Exames DETRAN: depende de agenda. Total médio: 2 a 4 meses."
+    answer: PRAZO_ETAPAS_CNH
   },
   {
     category: "Prazo",
     question: "Tem como acelerar o processo?",
-    answer: "Sim. Concentrando aulas teóricas, agendando exames sequenciais e mantendo disponibilidade contínua, alunos APTOS já concluíram em 6 semanas. Pergunte sobre nosso processo turbinado."
+    answer: "Organizar a documentação, estudar com regularidade e manter disponibilidade para os exames ajuda a evitar atrasos. A agenda e as aprovações dependem do Detran-PR; a APTOS não promete concluir em seis semanas ou outro prazo fixo."
   },
   {
     category: "Prazo",
     question: "E se eu pausar o processo no meio?",
-    answer: "Sem problema. Como não há mais prazo de 12 meses, você pode pausar e retomar depois sem perder o que já fez."
+    answer: "O limite geral de 12 meses foi extinto. Antes de interromper ou retomar, consulte a situação do processo no Detran-PR: exames, documentos e requisitos específicos podem ter validade própria."
   },
 
   // ========================= DOCUMENTAÇÃO =========================

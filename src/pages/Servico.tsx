@@ -89,9 +89,9 @@ const Servico = () => {
         description: "Nossa página principal com tudo sobre a APTOS em SJP.",
       },
       {
-        title: "Simulado DETRAN-PR",
-        href: "/simulado-detran-pr",
-        description: "Teste seus conhecimentos com nosso simulado gratuito de 30 questões.",
+        title: "Guia de estudo teórico",
+        href: "/formas-estudo-teorico",
+        description: "Conheça as formas de preparação para a prova teórica do Detran-PR.",
       },
       {
         title: "Perguntas Frequentes",
@@ -254,7 +254,7 @@ const Servico = () => {
         <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl">
           {[
             { icon: Award, t: "+15 anos", s: "no mercado" },
-            { icon: CheckCircle, t: "95%", s: "aprovação" },
+            { icon: CheckCircle, t: "CNH", s: "orientação" },
             { icon: ShieldCheck, t: "DETRAN-PR", s: "credenciada" },
             { icon: Clock, t: "Rápido", s: "atendimento humano" },
           ].map((x) => (
