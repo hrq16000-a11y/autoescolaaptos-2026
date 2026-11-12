@@ -9,17 +9,21 @@ const cases = [
   fs.mkdirSync("artifacts/aptos-visual", { recursive: true });
   const browser = await chromium.launch({ headless: true });
   try {
-    // Regressao: simulador fica oculto da home, mas acessivel por URL direta.
+    // Regra editorial vigente: o antigo simulador não deve estar nos menus nem servir questões.
     const home = await browser.newPage({ viewport: { width: 390, height: 844 } });
     const homeResponse = await home.goto(base + "/", { waitUntil: "networkidle", timeout: 45000 });
     if (!homeResponse || homeResponse.status() !== 200) throw Error("Home nao respondeu HTTP 200");
-    const visibleHomeLinks = await home.locator('a[href="/simulado-detran-pr"]').count();
-    if (visibleHomeLinks !== 0) throw Error("Simulado ainda exposto na home: " + visibleHomeLinks + " links");
-    console.log("PASS home: Simulado DETRAN-PR oculto dos links");
+    if ((await home.locator('a[href="/simulado-detran-pr"]').count()) !== 0)
+      throw Error("Link do simulado removido continua publico na Home");
+    if ((await home.locator('nav a[href="/blog"]').count()) !== 0)
+      throw Error("Blog ainda aparece no menu principal");
+    console.log("PASS home: simulador e Blog ocultos dos menus");
     const directResponse = await home.goto(base + "/simulado-detran-pr", { waitUntil: "domcontentloaded", timeout: 45000 });
-    if (!directResponse || directResponse.status() !== 200) throw Error("Simulado nao acessivel por URL direta");
-    await home.getByRole("heading", { name: /Simulado DETRAN PR 2026/i }).waitFor({ state: "visible", timeout: 15000 });
-    console.log("PASS rota direta: Simulado DETRAN-PR acessivel");
+    if (!directResponse || directResponse.status() >= 400) throw Error("Rota legada inacessivel: " + directResponse?.status());
+    await home.waitForURL(/\/formas-estudo-teorico(?:[/?#]|$)/, { timeout: 15000 });
+    if ((await home.getByRole("heading", { name: /Simulado DETRAN PR 2026/i }).count()) !== 0)
+      throw Error("Quiz antigo ainda renderizado");
+    console.log("PASS rota legada: redireciona ao guia de estudo, sem quiz");
     await home.close();
     for (const device of [{name:"compact",width:320,height:640},{name:"mobile",width:390,height:844},{name:"tablet",width:768,height:1024},{name:"desktop",width:1440,height:900}]) {
       const page = await browser.newPage({ viewport:{width:device.width,height:device.height}, deviceScaleFactor:1 });
