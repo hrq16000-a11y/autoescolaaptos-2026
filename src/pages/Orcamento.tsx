@@ -51,7 +51,7 @@ const Orcamento = () => {
     <div className="min-h-screen flex flex-col bg-background">
       <SEO
         title="Solicitar Orçamento de CNH | Autoescola APTOS São José dos Pinhais"
-        description="Receba em minutos um orçamento personalizado para tirar sua CNH (A, B ou AB) ou inclusão de categoria na Autoescola APTOS. Responda 3 perguntas rápidas."
+        description="Solicite um orçamento para CNH A, B ou AB, ou inclusão de categoria na Autoescola APTOS. Preencha a triagem e receba retorno conforme disponibilidade."
         canonical="/orcamento"
       />
       <Navbar />
@@ -61,7 +61,7 @@ const Orcamento = () => {
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4 text-sm font-semibold">
               <ShieldCheck className="w-4 h-4" />
-              Atendimento humano em poucos minutos
+              Atendimento humano
             </div>
             <h1 className="text-3xl md:text-5xl font-heading font-black mb-3">
               Monte seu <span className="text-primary">orçamento</span> em 3 passos
@@ -205,7 +205,7 @@ const Orcamento = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
             <TrustItem icon={Award} title="+15 anos" subtitle="formando condutores" />
-            <TrustItem icon={CheckCircle2} title="95% aprovação" subtitle="em provas do DETRAN-PR" />
+            <TrustItem icon={CheckCircle2} title="CNH e categorias" subtitle="orientação no atendimento" />
             <TrustItem icon={Clock} title="Sem enrolação" subtitle="orçamento direto no WhatsApp" />
           </div>
         </div>

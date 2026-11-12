@@ -170,8 +170,7 @@ const Resolucao1020 = () => {
                   <p>
                     As principais mudanças incluem: <strong className="text-foreground">redução da carga horária prática para 2 horas</strong>, 
                     fim da carga horária mínima teórica, possibilidade de estudo 100% online pelo app CNH do Brasil, 
-                    fim do prazo de 12 meses para conclusão e processo digital. O tempo médio para obter a CNH 
-                    caiu para <strong className="text-foreground">2 a 3 meses</strong>, dependendo da agenda do DETRAN e do ritmo do candidato.
+                    fim do prazo geral de 12 meses para conclusão e processo digital. A duração real varia conforme a preparação do candidato, o agendamento dos exames e a aprovação em cada etapa; não existe um prazo fixo garantido.
                   </p>
                 </div>
               </motion.div>
