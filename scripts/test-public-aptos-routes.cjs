@@ -14,11 +14,10 @@ async function verify(page, route, width) {
 
   if (route === "/perguntas-frequentes") {
     await page.getByRole("heading", { level: 1, name: /Perguntas Frequentes/i }).waitFor({ state: "visible", timeout: 20000 });
-    const first = page.locator('button[data-state="closed"]').first();
+    const first = page.locator('main .max-w-3xl button[data-state="closed"]').first();
     await first.waitFor({ state: "visible", timeout: 15000 });
     await first.click();
-    await first.waitFor({ state: "visible" });
-    if (await first.getAttribute("data-state") !== "open") throw Error("FAQ accordion did not open");
+    await page.locator('main .max-w-3xl button[data-state="open"]').first().waitFor({ state: "visible", timeout: 8000 });
   } else if (route === "/1contato") {
     await page.getByRole("heading", { level: 1, name: /Vamos entender/i }).waitFor({ state: "visible", timeout: 20000 });
     await page.getByRole("progressbar", { name: /Etapa 1 de 3/i }).waitFor({ state: "visible" });
