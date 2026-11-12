@@ -32,4 +32,7 @@ jobs:
       - run: node --experimental-strip-types --test tests/marketing-vercel-export.test.mjs
       - run: node --test tests/inclusao-moto.test.mjs
       - run: npm run ${{ matrix.command }}
+      # Simula o build que o editor Lovable usa para a prévia; não publica.
+      - run: npm run build:dev
+        if: matrix.command == 'build'
 
