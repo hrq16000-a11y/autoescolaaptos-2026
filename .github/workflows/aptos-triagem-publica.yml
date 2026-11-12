@@ -1,5 +1,9 @@
 name: APTOS - triagem em navegador no dominio oficial
 on:
+  pull_request:
+    paths:
+      - 'scripts/test-public-aptos-routes.cjs'
+      - '.github/workflows/aptos-triagem-publica.yml'
   workflow_dispatch:
   push:
     branches: [main]
@@ -13,6 +17,7 @@ on:
       - 'scripts/test-public-home-funnel.cjs'
       - 'scripts/test-public-service-links.cjs'
       - 'scripts/test-public-orcamento.cjs'
+      - 'scripts/test-public-aptos-routes.cjs'
       - 'src/pages/Orcamento.tsx'
       - 'src/components/Services.tsx'
       - 'src/components/Navbar.tsx'
@@ -58,6 +63,10 @@ jobs:
         env:
           NODE_PATH: /tmp/aptos-smoke/node_modules
         run: node scripts/test-public-orcamento.cjs
+      - name: Validar FAQ e funis dedicados sem criar cadastros
+        env:
+          NODE_PATH: /tmp/aptos-smoke/node_modules
+        run: node scripts/test-public-aptos-routes.cjs
       - name: Guardar evidencias visuais
         if: always()
         uses: actions/upload-artifact@v4
