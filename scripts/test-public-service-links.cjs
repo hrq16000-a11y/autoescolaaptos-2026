@@ -2,7 +2,7 @@ const { chromium } = require("playwright");
 const origin = "https://autoescolaaptos.com.br";
 const services = [
   { name: "Inclusão de Categoria (A ou B)", route: "/inclusao-categoria" },
-  { name: "Curso de Reciclagem 100% Online", route: "/reciclagem-cnh" },
+  { name: "Curso de Reciclagem", route: "/reciclagem-cnh" },
   { name: "Reteste Prático", route: "/reteste-pratico" },
 ];
 (async () => {
