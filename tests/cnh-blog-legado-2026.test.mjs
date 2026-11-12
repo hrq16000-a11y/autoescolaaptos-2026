@@ -42,7 +42,7 @@ test("Prova teórica: regra atual, sem promessa de aprovação ou simulador ativ
 test("Prova prática: baliza e rampa retiradas, sem 3 tentativas", () => {
   const a = article("como-passar-prova-pratica-detran");
   assert.match(a, /retirada da baliza/);
-  assert.match(a, /retirada da \*\*rampa\*\*/);
+  assert.match(a, /retirada a \*\*rampa\*\*/);
   assert.doesNotMatch(a, /Você tem 3 tentativas|### Na Baliza|Aulas no mesmo percurso da prova/);
 });
 
