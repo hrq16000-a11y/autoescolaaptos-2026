@@ -2,6 +2,8 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Bike, CheckCircle2, Clock3, MapPin, MessageCircle, ShieldCheck } from "lucide-react";
 import SEO from "@/components/SEO";
+import pcxPhoto from "@/assets/aptos-pcx-real-tratada-2026.webp";
+import fanPhoto from "@/assets/aptos-fan160-tratada-2026.webp";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -20,8 +22,8 @@ const motocicletas = [
     tipo: "Automática",
     titulo: "Praticidade para aprender",
     descricao: "Uma opção sem troca manual de marchas, com uma experiência de pilotagem mais simples para quem prefere moto automática.",
-    imagem: "https://res.cloudinary.com/dqnwlodjs/image/upload/v1794352862/aptos/categoria-a/pcx-foto-real-2026.jpg",
-    alt: "Foto real da Honda PCX automática da Autoescola APTOS, na rua em São José dos Pinhais",
+    imagem: pcxPhoto,
+    alt: "Imagem tratada da Honda PCX automática da Autoescola APTOS, vista lateral",
   },
   {
     key: "fan160" as const,
@@ -29,8 +31,8 @@ const motocicletas = [
     tipo: "Manual",
     titulo: "Aprenda com câmbio manual",
     descricao: "Opção para quem deseja praticar na motocicleta manual e desenvolver controle de embreagem, marchas e frenagem.",
-    imagem: "https://res.cloudinary.com/dqnwlodjs/image/upload/v1794352866/aptos/categoria-a/fan160-foto-real-2026.jpg",
-    alt: "Foto da Honda Fan 160 azul manual informada pela Autoescola APTOS",
+    imagem: fanPhoto,
+    alt: "Imagem tratada da Honda Fan 160 preta com câmbio manual, vista lateral",
   },
 ];
 
@@ -179,8 +181,8 @@ const InclusaoCategoriaA = () => {
                     }}
                     aria-pressed={moto === item.key}
                     className={`overflow-hidden rounded-2xl border-2 bg-zinc-900 text-left shadow-xl transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-300 ${moto === item.key ? "border-yellow-300" : "border-zinc-700 hover:border-red-400"}`}>
-                    <div className="flex aspect-[4/3] items-center justify-center overflow-hidden bg-white">
-                      <img src={item.imagem} alt={item.alt} className="h-full w-full object-contain" loading="eager" decoding="async" />
+                    <div className="flex aspect-[3/2] items-center justify-center overflow-hidden bg-zinc-900">
+                      <img src={item.imagem} alt={item.alt} className="h-full w-full object-cover" loading="eager" decoding="async" />
                     </div>
                     <div className="p-4">
                       <p className="text-xs font-bold uppercase tracking-widest text-yellow-300">{item.tipo}</p>
@@ -223,12 +225,12 @@ const InclusaoCategoriaA = () => {
             <div className="mx-auto max-w-3xl text-center">
               <p className="text-sm font-bold uppercase tracking-widest text-primary">Escolha a moto para seu treinamento</p>
               <h2 id="motos-titulo" className="mt-3 text-3xl font-black md:text-4xl">Manual ou automática: qual você prefere?</h2>
-              <p className="mt-3 text-muted-foreground">As fotos abaixo são dos veículos informados pela APTOS. A equipe confirma disponibilidade e condições aplicáveis ao seu processo.</p>
+              <p className="mt-3 text-muted-foreground">Imagens tratadas a partir de fotos de referência enviadas pela APTOS. A equipe confirma o veículo disponível e as condições aplicáveis ao seu processo.</p>
             </div>
             <div className="mx-auto mt-9 grid max-w-5xl gap-5 md:grid-cols-2">
               {motocicletas.map(item => (
                 <article key={item.key} className={`overflow-hidden rounded-3xl border-2 bg-card shadow-sm transition ${moto === item.key ? "border-primary" : "border-border"}`}>
-                  <img src={item.imagem} alt={item.alt} className="aspect-[16/10] w-full bg-white object-contain" loading="lazy" decoding="async" />
+                  <img src={item.imagem} alt={item.alt} className="aspect-[3/2] w-full bg-zinc-900 object-cover" loading="lazy" decoding="async" />
                   <div className="p-6">
                     <span className="text-xs font-bold uppercase tracking-wider text-primary">{item.tipo}</span>
                     <h3 className="mt-2 text-2xl font-black">{item.nome}</h3>
