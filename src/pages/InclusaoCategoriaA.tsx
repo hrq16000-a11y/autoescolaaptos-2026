@@ -197,26 +197,38 @@ const InclusaoCategoriaA = () => {
         </section>
 
 
-        <section aria-label="Materiais visuais da campanha" className="border-b border-border bg-zinc-950 px-4 py-8 text-white">
-          <div className="container mx-auto flex flex-col items-center justify-center gap-5 md:flex-row">
-            <figure className="w-full max-w-md overflow-hidden rounded-2xl border border-white/20 bg-zinc-900 p-2">
-              <img
-                src="https://res.cloudinary.com/dqnwlodjs/image/upload/v1794352826/aptos/categoria-a/banner-horizontal-2026.png"
-                alt="Campanha Autoescola APTOS: inclusão de categoria A, moto manual ou automática, R$ 750 à vista"
-                className="aspect-video w-full rounded-xl object-contain"
-                loading="lazy"
-                decoding="async"
-              />
-            </figure>
-            <figure className="w-36 shrink-0 overflow-hidden rounded-2xl border border-white/20 bg-zinc-900 p-2">
-              <img
-                src="https://res.cloudinary.com/dqnwlodjs/image/upload/v1794352859/aptos/categoria-a/poster-vertical-2026.png"
-                alt="Arte vertical da campanha de inclusão de moto da APTOS"
-                className="h-auto w-full rounded-xl"
-                loading="lazy"
-                decoding="async"
-              />
-            </figure>
+        <section aria-labelledby="motos-em-destaque" className="border-b border-white/10 bg-zinc-950 px-4 py-10 text-white md:py-14">
+          <div className="container mx-auto max-w-6xl">
+            <div className="mb-7 text-center">
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-yellow-300">Conheça as motos da campanha</p>
+              <h2 id="motos-em-destaque" className="mt-2 text-2xl font-black leading-tight sm:text-3xl">
+                Automática ou manual: veja as duas opções
+              </h2>
+              <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-zinc-300 sm:text-base">
+                Imagens nítidas, nomes claros e detalhes de cada modelo, sem precisar ampliar uma arte para ler.
+              </p>
+            </div>
+            <div className="grid gap-5 md:grid-cols-2">
+              {motocicletas.map((item) => (
+                <figure key={item.key} className="overflow-hidden rounded-3xl border border-white/20 bg-zinc-900 shadow-xl">
+                  <img
+                    src={item.imagem}
+                    alt={item.alt}
+                    className="aspect-[3/2] w-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <figcaption className="p-4 sm:p-5">
+                    <p className="text-xs font-bold uppercase tracking-widest text-yellow-300">{item.tipo}</p>
+                    <h3 className="mt-1 text-xl font-black text-white sm:text-2xl">{item.nome}</h3>
+                    <p className="mt-1 text-sm text-zinc-300">{item.titulo}</p>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+            <p className="mt-5 text-center text-xs text-zinc-400">
+              Imagens tratadas a partir de referências fornecidas pela APTOS. A disponibilidade dos veículos é confirmada pela equipe.
+            </p>
           </div>
         </section>
 
