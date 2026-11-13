@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Bike, CheckCircle2, Clock3, MapPin, MessageCircle, ShieldCheck } from "lucide-react";
 import SEO from "@/components/SEO";
+import CampaignCelebration, { CampaignCountdown } from "@/components/CampaignCelebration";
 import pcxPhoto from "@/assets/aptos-pcx-real-tratada-2026.webp";
 import fanPhoto from "@/assets/aptos-fan160-tratada-2026.webp";
 import Navbar from "@/components/Navbar";
@@ -13,6 +14,8 @@ import { readCampaignUtms } from "@/lib/campaignTracking";
 const PATH = "/inclusao-moto";
 const CAMPAIGN = "inclusao_categoria_a_moto";
 const SITE = "https://autoescolaaptos.com.br";
+// 30/11/2026 até 23h59 em São José dos Pinhais (UTC-3).
+const CAMPAIGN_DEADLINE = Date.parse("2026-12-01T00:00:00-03:00");
 type Moto = "pcx" | "fan160";
 
 const motocicletas = [
@@ -50,6 +53,10 @@ const faq = [
     resposta: "Não. A campanha informa R$ 750 à vista pelo plano da autoescola, mais taxas do DETRAN-PR não inclusas, estimadas em média em R$ 299. Taxas oficiais podem variar e devem ser consultadas no momento do processo.",
   },
   {
+    pergunta: "Até quando vale a campanha de inclusão de moto?",
+    resposta: "A condição divulgada de R$ 750 à vista vale até 30/11/2026, conforme disponibilidade de vagas e confirmação pela APTOS. Taxas do DETRAN-PR são cobradas à parte.",
+  },
+  {
     pergunta: "Como recebo atendimento para garantir minha vaga?",
     resposta: "Escolha a moto de seu interesse e preencha a triagem rápida. A solicitação é registrada antes do encaminhamento ao WhatsApp, onde a equipe confirma agenda, condições e documentos.",
   },
@@ -71,6 +78,7 @@ const jsonLd = {
         "@type": "Offer",
         price: "750.00",
         priceCurrency: "BRL",
+        priceValidUntil: "2026-11-30",
         description: "Preço à vista do plano da autoescola. Taxas do DETRAN não inclusas (estimativa média R$ 299); condições e agenda sujeitas à confirmação.",
         url: SITE + PATH,
       },
@@ -109,7 +117,15 @@ function getTriagemLink(moto: Moto, utms: ReturnType<typeof readCampaignUtms>) {
 
 const InclusaoCategoriaA = () => {
   const [moto, setMoto] = useState<Moto>("pcx");
+  const [clock, setClock] = useState(() => Date.now());
+  const remainingMs = Math.max(0, CAMPAIGN_DEADLINE - clock);
+  const campaignActive = remainingMs > 0;
   const utms = useMemo(() => readCampaignUtms(), []);
+
+  useEffect(() => {
+    const tick = window.setInterval(() => setClock(Date.now()), 1000);
+    return () => window.clearInterval(tick);
+  }, []);
 
   useEffect(() => {
     track("campaign_view", { campaign: CAMPAIGN, page_path: PATH, ...utms });
@@ -155,16 +171,29 @@ const InclusaoCategoriaA = () => {
                   Já tem CNH e quer adicionar a categoria de moto? Escolha a opção que prefere e converse com a equipe da Autoescola APTOS.
                 </p>
                 <div className="mt-7 rounded-2xl border border-yellow-300/60 bg-zinc-950/75 p-5 shadow-xl sm:p-6">
-                  <p className="text-sm font-semibold uppercase tracking-widest text-zinc-200">Plano de inclusão · valor à vista</p>
-                  <p className="mt-1 text-5xl font-black tracking-tight text-yellow-300 sm:text-6xl">R$ 750<span className="text-3xl sm:text-4xl">,00</span></p>
-                  <p className="mt-2 text-sm leading-relaxed text-zinc-100">
-                    <strong>Taxas do DETRAN não inclusas.</strong> Estimativa média de R$ 299,00, sujeita aos valores oficiais vigentes.
-                  </p>
+                  {campaignActive ? (
+                    <>
+                      <p className="text-sm font-semibold uppercase tracking-widest text-zinc-200">Plano de inclusão · valor à vista</p>
+                      <p className="mt-1 text-5xl font-black tracking-tight text-yellow-300 sm:text-6xl">R$ 750<span className="text-3xl sm:text-4xl">,00</span></p>
+                      <p className="mt-2 text-sm leading-relaxed text-zinc-100">
+                        <strong>Taxas do DETRAN não inclusas.</strong> Estimativa média de R$ 299,00, sujeita aos valores oficiais vigentes.
+                      </p>
+                      <p className="mb-3 mt-4 flex items-center gap-2 text-sm font-black text-yellow-200">
+                        <Clock3 aria-hidden className="h-4 w-4" /> Condição especial até 30/11/2026
+                      </p>
+                      <CampaignCountdown remainingMs={remainingMs} />
+                    </>
+                  ) : (
+                    <div role="status">
+                      <p className="text-lg font-black text-yellow-300">Campanha encerrada em 30/11/2026</p>
+                      <p className="mt-2 text-sm text-zinc-100">Consulte os valores e condições atualmente disponíveis com nossa equipe.</p>
+                    </div>
+                  )}
                 </div>
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                   <Button asChild size="lg" className="min-h-14 bg-red-600 px-7 text-base font-bold text-white hover:bg-red-700">
                     <Link to={triagem} onClick={() => goToFunnel("hero")} data-intent="triagem">
-                      <MessageCircle aria-hidden className="mr-2 h-5 w-5" /> Quero minha categoria A
+                      <MessageCircle aria-hidden className="mr-2 h-5 w-5" /> {campaignActive ? "Aproveitar a campanha" : "Consultar condições atuais"}
                     </Link>
                   </Button>
                   <Button asChild size="lg" variant="outline" className="min-h-14 border-white/60 bg-transparent text-white hover:bg-white/10 hover:text-white">
@@ -319,6 +348,7 @@ const InclusaoCategoriaA = () => {
         </section>
       </main>
       <Footer />
+      <CampaignCelebration active={campaignActive} remainingMs={remainingMs} triagem={triagem} onFunnel={() => goToFunnel("promo_popup")} />
     </>
   );
 };

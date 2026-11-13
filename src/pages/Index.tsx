@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import pcxPhoto from "@/assets/aptos-pcx-real-tratada-2026.webp";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import TimelineCNH from "@/components/TimelineCNH";
@@ -65,13 +67,18 @@ export const homeJsonLd = {
 
 const Index = () => {
   useScrollTracking();
+  const [campaignActive, setCampaignActive] = useState(() => Date.now() < Date.parse("2026-12-01T00:00:00-03:00"));
+  useEffect(() => {
+    const checkDeadline = window.setInterval(() => setCampaignActive(Date.now() < Date.parse("2026-12-01T00:00:00-03:00")), 60000);
+    return () => window.clearInterval(checkDeadline);
+  }, []);
 
 
   const homeRelated = [
     {
       title: "Inclusão de categoria A — moto manual ou automática",
       href: "/inclusao-moto",
-      description: "Campanha de inclusão da categoria A com PCX ou Fan 160 por R$ 750 à vista; taxas do DETRAN à parte.",
+      description: "Inclusão da categoria A com PCX ou Fan 160. Consulte a validade das ofertas e as condições atuais.",
     },
     {
       title: "Aulas em carro automático",
@@ -156,24 +163,24 @@ const Index = () => {
       <section aria-label="Campanha de inclusão de categoria A" className="border-y border-amber-300/30 bg-zinc-950 text-white">
         <div className="container mx-auto grid items-center gap-5 px-4 py-7 sm:grid-cols-[1fr_auto] md:gap-8">
           <div>
-            <p className="text-xs font-black uppercase tracking-[0.15em] text-yellow-300">Nova campanha · Inclusão de moto</p>
+            <p className="text-xs font-black uppercase tracking-[0.15em] text-yellow-300 motion-safe:animate-pulse">{campaignActive ? "Por tempo limitado · Até 30/11/2026" : "Campanha encerrada · Inclusão de moto"}</p>
             <h2 className="mt-2 text-2xl font-black leading-tight md:text-3xl">
               Categoria A: <span className="text-yellow-300">PCX automática</span> ou Fan 160 manual
             </h2>
             <p className="mt-2 text-sm text-zinc-200 md:text-base">
-              <strong className="text-yellow-300">R$ 750 à vista</strong> · taxas do DETRAN não inclusas (média estimada de R$ 299).
+              {campaignActive ? <><strong className="text-yellow-300">R$ 750 à vista</strong> até 30/11/2026 · taxas do DETRAN não inclusas (média estimada de R$ 299).</> : "A condição promocional foi encerrada em 30/11/2026. Consulte novas condições disponíveis."}
             </p>
             <Link to="/inclusao-moto" data-component="HomeMotoCallout" data-intent="internal"
               onClick={() => track("campaign_cta_click", { campaign: "inclusao_categoria_a_moto", source: "home_moto_callout" })}
               className="mt-4 inline-flex min-h-12 w-full items-center justify-center rounded-lg bg-red-600 px-5 py-3 text-center text-sm font-bold text-white shadow-lg transition hover:bg-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-300 sm:w-auto">
-              Conhecer o plano de moto <span aria-hidden className="ml-2">→</span>
+              {campaignActive ? "Aproveitar a campanha" : "Consultar plano de moto"} <span aria-hidden className="ml-2">→</span>
             </Link>
           </div>
           <img
-            src="https://res.cloudinary.com/dqnwlodjs/image/upload/v1794352826/aptos/categoria-a/banner-horizontal-2026.png"
-            alt="Campanha de moto da Autoescola APTOS com opção manual ou automática"
+            src={pcxPhoto}
+            alt="Honda PCX automática da Autoescola APTOS em imagem tratada"
             loading="lazy" decoding="async"
-            className="mx-auto aspect-video w-full max-w-[240px] rounded-xl border border-zinc-700 object-contain sm:w-[200px] md:max-w-[260px] md:w-[260px]"
+            className="mx-auto aspect-[3/2] w-full max-w-sm rounded-2xl border border-zinc-700 object-cover shadow-lg sm:w-[260px] md:w-[320px]"
           />
         </div>
       </section>

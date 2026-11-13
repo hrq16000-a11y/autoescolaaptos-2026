@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import { test } from "node:test";
 
 const page = readFileSync("src/pages/InclusaoCategoriaA.tsx","utf8");
+const popup = readFileSync("src/components/CampaignCelebration.tsx","utf8");
 const router = readFileSync("src/App.tsx","utf8");
 const home = readFileSync("src/pages/Index.tsx","utf8");
 const triage = readFileSync("src/pages/UmContato.tsx","utf8");
@@ -49,4 +50,24 @@ test("captação é feita antes do WhatsApp e mantém a moto e UTMs", () => {
   assert.match(triage, /Moto de interesse/);
   assert.match(triage, /persistence_not_confirmed/);
   assert.match(triage, /submit-triagem/);
+});
+
+
+test("validade da oferta, contagem regressiva e popup acessível sem escassez fictícia", () => {
+  assert.equal(new Date("2026-12-01T00:00:00-03:00").toISOString(), "2026-12-01T03:00:00.000Z");
+  assert.match(page, /CAMPAIGN_DEADLINE = Date\.parse\("2026-12-01T00:00:00-03:00"\)/);
+  assert.match(page, /priceValidUntil: "2026-11-30"/);
+  assert.match(page, /campaignActive \? \(/);
+  assert.match(page, /Campanha encerrada em 30\/11\/2026/);
+  assert.match(page, /<CampaignCelebration active=\{campaignActive\}/);
+  assert.match(popup, /POPUP_SEEN_KEY/);
+  assert.match(popup, /useReducedMotion/);
+  assert.match(popup, /playCelebrationSound\(\); setBurst/);
+  assert.match(popup, /to=\{triagem\}/);
+  assert.match(popup, /Vagas limitadas, com disponibilidade confirmada pela equipe/);
+  assert.match(home, /campaignActive \? "Por tempo limitado/);
+  assert.match(home, /src=\{pcxPhoto\}/);
+  assert.doesNotMatch(home, /banner-horizontal-2026\.png/);
+  assert.doesNotMatch(popup, /15 reservas|20 vagas|15 pessoas/);
+  assert.doesNotMatch(popup, /autoPlay|autoplay/);
 });
