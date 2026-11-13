@@ -20,7 +20,8 @@ test("rota /inclusao-moto publicada pelo React Router e canonical único", () =>
 test("campanha exibe oferta e separa as taxas do DETRAN", () => {
   assert.match(page, /R\$ 750/);
   assert.match(page, /Taxas do DETRAN não inclusas/);
-  assert.match(page, /399/);
+  assert.match(page, /R\$ 299/);
+  assert.doesNotMatch(page, /R\$ 399/);
   assert.match(page, /Honda PCX/);
   assert.match(page, /Honda Fan 160/);
 });
@@ -28,7 +29,11 @@ test("campanha exibe oferta e separa as taxas do DETRAN", () => {
 test("links e mídia têm URL estável, sem imagem local 404", () => {
   assert.doesNotMatch(page, /\/campanhas\/categoria-a\/(pcx|fan160)-aptos-real\.webp/);
   const refs = [...page.matchAll(/https:\/\/res\.cloudinary\.com\/dqnwlodjs\/image\/upload\/v\d+\/aptos\/categoria-a\/[^"\s]+/g)];
-  assert.ok(refs.length >= 4, "landing deve usar banner, poster e fotos reais");
+  assert.ok(refs.length >= 2, "landing deve preservar banner e poster da campanha");
+  assert.match(page, /aptos-pcx-real-tratada-2026\.webp/);
+  assert.match(page, /aptos-fan160-tratada-2026\.webp/);
+  assert.match(page, /imagem: pcxPhoto/);
+  assert.match(page, /imagem: fanPhoto/);
   assert.match(home, /to="\/inclusao-moto"/);
   assert.match(home, /HomeMotoCallout/);
   assert.match(home, /R\$ 750/);
