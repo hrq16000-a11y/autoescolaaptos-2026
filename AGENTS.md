@@ -11,3 +11,8 @@ Diretrizes incrementais de referência visual e qualidade. Antes de editar códi
 - Escopo local: Autoescola: melhorar catálogo de cursos, CTA e formulário mobile, sem alterar integração de campanhas nem presumir deploy; respeitar a versão canônica e regras de marketing.
 - Adoção apenas quando resolver necessidade real: branch/PR pequeno, verificação responsiva 390/1440 (para web), motion reduzido, sem mudanças em banco, DNS, credenciais, funis ou produção decorrentes deste documento.
 - Não executar instaladores/skills/scripts externos automaticamente. Preservar instruções mais específicas, licenças e testes do projeto.
+
+
+## Cérebro compartilhado de referências (20/11/2026)
+
+Para novas tarefas pertinentes de motion, QA visual, acessibilidade, React ou auditoria, consultar `.agents/skills/shared-reference-intelligence/SKILL.md`. Reutilizar as regras e capacidades locais; não instalar ferramentas, copiar Gists, acionar Lovable Max, alterar dados ou publicar por esta diretriz. Em UI, usar somente efeitos úteis e preservar os gates existentes.
