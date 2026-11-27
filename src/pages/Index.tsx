@@ -153,7 +153,7 @@ const Index = () => {
             to="/carro-automatico"
             data-component="HomeAutomaticoCallout"
             data-intent="internal"
-            className="inline-flex min-h-[48px] shrink-0 items-center justify-center rounded-lg bg-primary px-5 py-3 text-sm font-bold text-primary-foreground shadow-smooth transition-all hover:-translate-y-0.5 hover:shadow-glow"
+            className="inline-flex min-h-[48px] shrink-0 items-center justify-center rounded-lg bg-primary px-5 py-3 text-sm font-bold text-primary-foreground shadow-smooth transition-colors hover:bg-primary/90"
           >
             Conhecer carro automático →
           </Link>
@@ -163,7 +163,7 @@ const Index = () => {
       <section aria-label="Campanha de inclusão de categoria A" className="border-y border-amber-300/30 bg-zinc-950 text-white">
         <div className="container mx-auto grid items-center gap-5 px-4 py-7 sm:grid-cols-[1fr_auto] md:gap-8">
           <div>
-            <p className="text-xs font-black uppercase tracking-[0.15em] text-yellow-300 motion-safe:animate-pulse">{campaignActive ? "Por tempo limitado · Até 30/11/2026" : "Campanha encerrada · Inclusão de moto"}</p>
+            <p className="text-xs font-black uppercase tracking-[0.15em] text-yellow-300">{campaignActive ? "Por tempo limitado · Até 30/11/2026" : "Campanha encerrada · Inclusão de moto"}</p>
             <h2 className="mt-2 text-2xl font-black leading-tight md:text-3xl">
               Categoria A: <span className="text-yellow-300">PCX automática</span> ou Fan 160 manual
             </h2>
@@ -185,10 +185,10 @@ const Index = () => {
         </div>
       </section>
 
+      <Services />
       <TimelineCNH />
       <ProcessoHabilitacao />
       <PromoSection />
-      <Services />
       <Differentials />
       <GoogleReviews />
       <About />

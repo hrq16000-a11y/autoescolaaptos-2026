@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
 import instructorImage from "@/assets/instructor-teaching.webp";
@@ -18,10 +17,8 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Text Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+          <div
+
           >
             <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
               Sobre a APTOS
@@ -54,26 +51,21 @@ const About = () => {
 
             <ul className="space-y-3">
               {values.map((value, index) => (
-                <motion.li
+                <li
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
+
                   className="flex items-start space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
                   <span className="font-medium">{value}</span>
-                </motion.li>
+                </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
           {/* Images Grid */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+          <div
+
             className="grid grid-cols-2 gap-6"
           >
             <Card className="overflow-hidden col-span-2">
@@ -102,14 +94,12 @@ const About = () => {
                 Alunos Aprovados
               </div>
             </Card>
-          </motion.div>
+          </div>
         </div>
 
         {/* Credenciais */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
+
           className="text-center"
         >
           <Card className="inline-block px-8 py-6 bg-secondary/10 border-secondary/20">
@@ -127,7 +117,7 @@ const About = () => {
               </div>
             </div>
           </Card>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
@@ -49,10 +48,8 @@ const Contact = () => {
     <section id="contato" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
+
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
@@ -65,19 +62,16 @@ const Contact = () => {
           <p className="text-lg text-muted-foreground">
             Tire suas dúvidas, faça sua matrícula ou agende uma visita — tudo pelo WhatsApp, sem burocracia.
           </p>
-        </motion.div>
+        </div>
 
         {/* Contact Cards */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12 max-w-5xl mx-auto">
           {contactInfo.map((item, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+
             >
-              <Card className="p-5 h-full hover:shadow-medium transition-all duration-300 hover:-translate-y-1">
+              <Card className="p-5 h-full hover:shadow-medium transition-colors duration-150 ">
                 <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-3">
                   <item.icon className="w-5 h-5 text-primary" />
                 </div>
@@ -101,15 +95,13 @@ const Contact = () => {
                   </p>
                 )}
               </Card>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
+
         >
           <Card className="p-8 md:p-12 bg-gradient-to-br from-secondary to-secondary/90 text-secondary-foreground border-0">
             <div className="max-w-3xl mx-auto text-center">
@@ -154,13 +146,11 @@ const Contact = () => {
               </div>
             </div>
           </Card>
-        </motion.div>
+        </div>
 
         {/* Map */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
+
           className="mt-12"
         >
           <Card className="overflow-hidden">
@@ -175,13 +165,11 @@ const Contact = () => {
               title="Localização da Autoescola APTOS em São José dos Pinhais"
             />
           </Card>
-        </motion.div>
+        </div>
 
         {/* Social Media */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
+
           className="mt-12 text-center"
         >
           <p className="text-muted-foreground mb-4">Siga-nos nas redes sociais</p>
@@ -205,7 +193,7 @@ const Contact = () => {
               <Instagram className="w-5 h-5" />
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -84,9 +84,7 @@ const PromoSection = () => {
     <section className="py-16 bg-muted" id="promocoes">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+
           className="text-center mb-10"
         >
           <h2 className="text-3xl md:text-4xl font-heading font-black mb-4">
@@ -102,14 +100,11 @@ const PromoSection = () => {
           {promos.slice(0, 3).map((promo, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+
               className="group cursor-pointer"
               onClick={() => handlePromoClick(promo, index)}
             >
-              <div className="relative overflow-hidden rounded-2xl shadow-medium hover:shadow-strong transition-all duration-300">
+              <div className="relative overflow-hidden rounded-2xl shadow-medium hover:shadow-strong transition-colors duration-150">
                 <img
                   src={promo.image}
                   alt={promo.alt}
@@ -130,14 +125,11 @@ const PromoSection = () => {
           {promos.slice(3).map((promo, index) => (
             <motion.div
               key={index + 3}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+
               className="group cursor-pointer"
               onClick={() => handlePromoClick(promo, index + 3)}
             >
-              <div className="relative overflow-hidden rounded-xl shadow-soft hover:shadow-medium transition-all duration-300">
+              <div className="relative overflow-hidden rounded-xl shadow-soft hover:shadow-medium transition-colors duration-150">
                 <img
                   src={promo.image}
                   alt={promo.alt}
