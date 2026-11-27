@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Car, GraduationCap, RefreshCw, Bike, MessageCircle, ArrowRight } from "lucide-react";
@@ -75,19 +74,17 @@ const Services = () => {
   ];
 
   return (
-    <section id="servicos" className="py-24 bg-muted">
+    <section id="servicos" className="py-14 md:py-20 bg-muted">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center max-w-3xl mx-auto mb-16"
+        <div
+
+          className="max-w-3xl mb-8 md:mb-12"
         >
           <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
             Nossos Serviços
           </span>
-          <h2 className="text-4xl md:text-5xl font-heading font-black mb-6">
+          <h2 className="text-3xl md:text-5xl font-heading font-black mb-6">
             Tudo que Você Precisa para{" "}
             <span className="text-primary">Conquistar sua CNH</span>
           </h2>
@@ -95,35 +92,32 @@ const Services = () => {
             Da primeira habilitação à renovação, oferecemos serviços completos
             com qualidade e compromisso com sua aprovação
           </p>
-        </motion.div>
+        </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-10">
           {services.map((service, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+
             >
-              <Card className="p-8 h-full hover:shadow-large transition-all duration-300 border-2 hover:border-primary/20 relative overflow-hidden group">
+              <Card className="p-5 md:p-6 h-full flex flex-col hover:border-primary/30 transition-colors duration-150 border relative overflow-hidden group">
                 {service.highlight && (
                   <div className="absolute top-4 right-4 bg-accent text-accent-foreground px-3 py-1 rounded-full text-xs font-bold">
                     {service.highlight}
                   </div>
                 )}
                 
-                <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <service.icon className="w-8 h-8 text-primary" />
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-5">
+                  <service.icon className="w-6 h-6 text-primary" />
                 </div>
 
-                <h3 className="text-2xl font-heading font-bold mb-3">
+                <h3 className="text-xl font-heading font-bold mb-2">
                   {service.title}
                 </h3>
                 <p className="text-muted-foreground mb-6">{service.description}</p>
 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-2.5 mb-6 flex-1">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start space-x-3">
                       <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5 flex-shrink-0">
@@ -134,7 +128,7 @@ const Services = () => {
                   ))}
                 </ul>
 
-                <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors" asChild>
+                <Button variant="outline" className="w-full min-h-11 hover:bg-primary hover:text-primary-foreground transition-colors" asChild>
                   {service.title === "Primeira Habilitação" ? (
                     <Link
                       to="/orcamento"
@@ -171,15 +165,13 @@ const Services = () => {
                   </Link>
                 )}
               </Card>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
+
           className="text-center"
         >
           <p className="text-lg mb-6 text-muted-foreground">
@@ -204,7 +196,7 @@ const Services = () => {
             </a>
           </Button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
