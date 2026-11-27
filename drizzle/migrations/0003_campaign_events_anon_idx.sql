@@ -1,0 +1,2 @@
+CREATE INDEX IF NOT EXISTS idx_campaign_events_anon_created ON public.campaign_events (anon_id, created_at DESC);
+CREATE INDEX IF NOT EXISTS idx_marketing_optin_pending_sync ON public.marketing_optin (created_at) WHERE sheet_sync_status <> 'ok';
