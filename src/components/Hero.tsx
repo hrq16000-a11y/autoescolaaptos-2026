@@ -149,7 +149,7 @@ const Hero = () => {
       </div>
     </section>
     <section id="inicio-desktop" className="relative hidden md:flex bg-slate-950 text-white pt-20">
-      <div className="container mx-auto px-6 lg:px-10 py-12 lg:py-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-10 py-12 lg:py-16">
         <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-12">
           <div className="min-w-0">
             <p className="mb-5 inline-flex items-center gap-2 border-b border-red-500/60 pb-2 text-xs font-semibold uppercase tracking-[.16em] text-slate-200">
