@@ -220,15 +220,6 @@ const Footer = () => {
               >
                 Mestre dos Serviços
               </a>
-              <span className="text-background/30">|</span>
-              <a
-                href="https://pingsolucoes.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-background/70 hover:text-primary transition-colors text-sm"
-              >
-                Ping Soluções
-              </a>
             </div>
           </div>
         </div>
