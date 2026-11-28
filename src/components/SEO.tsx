@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet";
+import { DEFAULT_SOCIAL_IMAGE, type SocialImageDetails } from "@/lib/social-preview";
 
 interface SEOProps {
   title: string;
@@ -6,6 +7,7 @@ interface SEOProps {
   canonical?: string;
   type?: string;
   image?: string;
+  imageDetails?: SocialImageDetails;
   jsonLd?: object;
   noIndex?: boolean;
 }
@@ -15,7 +17,8 @@ const SEO = ({
   description, 
   canonical, 
   type = "website",
-  image = "/og-image.png",
+  image = DEFAULT_SOCIAL_IMAGE.url,
+  imageDetails,
   jsonLd,
   noIndex = false
 }: SEOProps) => {
@@ -27,6 +30,8 @@ const SEO = ({
       : `${siteUrl}${canonical.startsWith("/") ? canonical : `/${canonical}`}`
     : siteUrl;
   const fullImage = image.startsWith("http") ? image : `${siteUrl}${image}`;
+  // Apenas declarar dimensões verificadas para a imagem efetivamente escolhida.
+  const socialDetails = fullImage === DEFAULT_SOCIAL_IMAGE.url ? DEFAULT_SOCIAL_IMAGE : imageDetails;
   
   const defaultJsonLd = {
     "@context": "https://schema.org",
@@ -78,6 +83,10 @@ const SEO = ({
       <meta property="og:type" content={type} />
       <meta property="og:url" content={fullCanonical} />
       <meta property="og:image" content={fullImage} />
+      {socialDetails && <meta property="og:image:width" content={String(socialDetails.width)} />}
+      {socialDetails && <meta property="og:image:height" content={String(socialDetails.height)} />}
+      {socialDetails && <meta property="og:image:type" content={socialDetails.type} />}
+      {socialDetails && <meta property="og:image:alt" content={socialDetails.alt} />}
       <meta property="og:site_name" content="Autoescola APTOS" />
       <meta property="og:locale" content="pt_BR" />
       
@@ -86,6 +95,7 @@ const SEO = ({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={fullImage} />
+      {socialDetails && <meta name="twitter:image:alt" content={socialDetails.alt} />}
       
       {/* Additional SEO */}
       <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />

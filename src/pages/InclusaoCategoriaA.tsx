@@ -144,6 +144,7 @@ const InclusaoCategoriaA = () => {
         description="Inclua categoria A com opção de Honda PCX automática ou Honda Fan 160 manual na Autoescola APTOS em São José dos Pinhais. R$ 750 à vista. Taxas do DETRAN à parte, média de R$ 299."
         canonical={PATH}
         image="https://res.cloudinary.com/dqnwlodjs/image/upload/c_scale,w_1200/v1794352826/aptos/categoria-a/banner-horizontal-2026.png"
+        imageDetails={{ width: 1200, height: 675, type: "image/png", alt: "APTOS — inclusão de categoria A, com motos manual e automática" }}
         jsonLd={jsonLd}
       />
       <Navbar />
