@@ -43,6 +43,45 @@ else if (description.length > 165)
 if (!/og:title/i.test(html)) add("warn", "metatags", "og:title ausente no index.html.");
 if (!/twitter:card/i.test(html)) add("warn", "metatags", "twitter:card ausente no index.html.");
 
+// ---------- contrato de imagem social ----------
+const socialTags = (key) => [...html.matchAll(/<meta\b[^>]*>/gi)]
+  .filter(([tag]) => tag.includes(`property="${key}"`) || tag.includes(`name="${key}"`))
+  .map(([tag]) => ({ content: tag.match(/\bcontent="([^"]*)"/)?.[1] ?? "", managed: tag.includes('data-react-helmet="true"') }));
+const social = (key) => {
+  const values = socialTags(key);
+  if (values.length !== 1 || !values[0]?.content) {
+    add("error", "social", `${key}: esperado exatamente um metadado preenchido no HTML inicial.`);
+    return "";
+  }
+  if (!values[0].managed) add("error", "social", `${key}: fallback não gerenciado pelo Helmet (risco de duplicação).`);
+  return values[0].content;
+};
+const expectedImage = "https://autoescolaaptos.com.br/social-preview.png";
+const socialUrl = social("og:image");
+const socialWidth = social("og:image:width");
+const socialHeight = social("og:image:height");
+const socialType = social("og:image:type");
+const socialAlt = social("og:image:alt");
+if (socialUrl !== expectedImage || social("twitter:image") !== expectedImage)
+  add("error", "social", "OG e Twitter devem usar o mesmo fallback HTTPS próprio.");
+if (social("twitter:image:alt") !== socialAlt || social("twitter:card") !== "summary_large_image")
+  add("error", "social", "Twitter Card deve compartilhar o alt e o formato de imagem grande.");
+for (const key of ["og:title", "og:description", "og:type", "og:url", "og:site_name", "og:locale", "twitter:title", "twitter:description"]) social(key);
+const socialFile = join(ROOT, "public", "social-preview.png");
+const imageBytes = existsSync(socialFile) ? readFileSync(socialFile) : Buffer.alloc(0);
+if (imageBytes.length < 24 || imageBytes.subarray(0, 8).toString("hex") !== "89504e470d0a1a0a" || imageBytes.toString("ascii", 12, 16) !== "IHDR") {
+  add("error", "social", "public/social-preview.png ausente ou inválido.");
+} else {
+  const width = imageBytes.readUInt32BE(16), height = imageBytes.readUInt32BE(20);
+  if (width !== 1200 || height !== 630 || socialWidth !== String(width) || socialHeight !== String(height) || socialType !== "image/png")
+    add("error", "social", "Dimensões/tipo do PNG não correspondem aos metadados de compartilhamento.");
+  if (imageBytes.length > 150_000) add("error", "social", "PNG social excede o orçamento de 150 kB.");
+}
+const socialConfig = read(join(ROOT, "src", "lib", "social-preview.ts")) ?? "";
+for (const value of [`url: "${expectedImage}"`, "width: 1200", "height: 630", 'type: "image/png"', `alt: "${socialAlt}"`]) {
+  if (!socialConfig.includes(value)) add("error", "social", "Fallback do componente SEO diverge do HTML inicial: " + value);
+}
+
 // ---------- robots.txt ----------
 const robots = read(join(ROOT, "public", "robots.txt"));
 const disallowed = [];

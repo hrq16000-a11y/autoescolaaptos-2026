@@ -36,7 +36,8 @@ for (const path of ['/autoescola-sao-jose-dos-pinhais', '/categoria-a', '/catego
 const homeResponse = await server.fetch(new Request('http://localhost:3001/'));
 const homeHtml = await homeResponse.text();
 assert.equal(homeResponse.status, 200);
-for (const expected of ['Conquiste Sua', 'CNH', 'Conhecer carro automático', 'WebSite', 'Organization', 'DrivingSchool', 'noindex, nofollow']) {
+// O hero atual possui títulos responsivos distintos; exigir os dois no HTML SSR.
+for (const expected of ['<h1', 'Seu próximo passo para a', 'começa na APTOS', 'Conquiste sua', 'CNH', 'Conhecer carro automático', 'WebSite', 'Organization', 'DrivingSchool', 'noindex, nofollow']) {
   assert.ok(homeHtml.includes(expected), `Home missing ${expected}`);
 }
 assert.ok(!homeHtml.includes('ambiente de validação'));

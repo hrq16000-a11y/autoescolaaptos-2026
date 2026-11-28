@@ -446,18 +446,12 @@ const UmContato = () => {
         title="Triagem CNH em 60s | Autoescola APTOS São José dos Pinhais"
         description="Responda 3 perguntas rápidas e receba seu orçamento de CNH direto no WhatsApp. Primeira habilitação, renovação, mudança de categoria, reciclagem e reteste na Autoescola APTOS."
         canonical="/1contato"
+        image="/og-1contato.jpg"
+        imageDetails={{ width: 1200, height: 640, type: "image/jpeg", alt: "Triagem CNH em 60 segundos — Autoescola APTOS" }}
         jsonLd={jsonLd}
       />
       <Helmet>
         <meta name="keywords" content="triagem CNH, autoescola São José dos Pinhais, orçamento CNH, primeira habilitação, renovação CNH, reciclagem CNH suspensos" />
-        <meta property="og:image" content="https://autoescolaaptos.com.br/og-1contato.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Triagem CNH em 60 segundos — Autoescola APTOS" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://autoescolaaptos.com.br/1contato" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://autoescolaaptos.com.br/og-1contato.jpg" />
       </Helmet>
 
       <main id="main" className="flex-1 pt-4 pb-10">

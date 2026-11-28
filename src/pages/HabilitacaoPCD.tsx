@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet";
+import { DEFAULT_SOCIAL_IMAGE } from "@/lib/social-preview";
 import { motion } from "framer-motion";
 import {
   Accessibility,
@@ -124,6 +125,18 @@ const HabilitacaoPCD = () => {
         <meta property="og:description" content="CNH Especial para pessoas com deficiência: veículos adaptados, câmbio automático e acompanhamento na Junta Médica Especial." />
         <meta property="og:url" content={`${SITE}/pcd`} />
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Autoescola APTOS" />
+        <meta property="og:locale" content="pt_BR" />
+        <meta property="og:image" content={DEFAULT_SOCIAL_IMAGE.url} />
+        <meta property="og:image:width" content={String(DEFAULT_SOCIAL_IMAGE.width)} />
+        <meta property="og:image:height" content={String(DEFAULT_SOCIAL_IMAGE.height)} />
+        <meta property="og:image:type" content={DEFAULT_SOCIAL_IMAGE.type} />
+        <meta property="og:image:alt" content={DEFAULT_SOCIAL_IMAGE.alt} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Autoescola PCD em São José dos Pinhais — Habilitação Especial" />
+        <meta name="twitter:description" content="CNH Especial para pessoas com deficiência: veículos adaptados, câmbio automático e acompanhamento na Junta Médica Especial." />
+        <meta name="twitter:image" content={DEFAULT_SOCIAL_IMAGE.url} />
+        <meta name="twitter:image:alt" content={DEFAULT_SOCIAL_IMAGE.alt} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 

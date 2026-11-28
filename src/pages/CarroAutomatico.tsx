@@ -258,7 +258,6 @@ const CarroAutomatico = () => {
         title="Aulas de direção em carro automático | Autoescola APTOS SJP"
         description="Aulas práticas em carro automático na Autoescola APTOS, em São José dos Pinhais. Conheça a opção automática, tire dúvidas e fale com a equipe pelo WhatsApp."
         canonical="/carro-automatico"
-        image="/og-image.png"
         jsonLd={jsonLd}
       />
 
